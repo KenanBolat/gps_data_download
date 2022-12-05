@@ -1,0 +1,7 @@
+*.gz
+*.sp3
+*.Z
+/lib/
+/bin/
+/__pycache__/
+*.env
