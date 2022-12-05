@@ -1,6 +1,5 @@
 import datetime
 import requests
-import logging
 import csv
 import gzip
 import shutil
@@ -9,7 +8,7 @@ import re
 import gnsscal
 from dotenv import load_dotenv
 import pandas as pd
-from datetime import date, timedelta
+from datetime import date
 
 load_dotenv()
 
@@ -107,12 +106,12 @@ class IGU(object):
                               }
 
     def rename_file(self, filename):
-        new_file_name = "igu" + self.meta_data['name_string'][0] + ".sp3"
-        os.rename(filename, new_file_name)
+        new_name = "igu" + self.meta_data['name_string'][0] + ".sp3"
+        os.rename(filename, new_name)
         # shutil.move(filename, self.temp)
-        return new_file_name
+        return new_name
 
-    def compress_new_data(self, filename, meta_data):
+    def compress_new_data(self, filename):
 
         with open(filename, 'rb') as infile, \
                 gzip.open(os.path.join(self.igu_folder, filename + ".Z"), "wb") as gzip_file:
@@ -139,6 +138,7 @@ if __name__ == '__main__':
                                 'date_end',
                                 'new_file_name',
                                 'date_to_download',
+                                'day_of_year',
                                 'downloaded_at'])
 
     print(igu_data.data)
@@ -156,9 +156,10 @@ if __name__ == '__main__':
                     igu_data.meta_data['date_end'].date():
                 print('Date is relevant ')
                 new_file_name = igu_data.rename_file(uncompressed_file)
-                igu_data.compress_new_data(new_file_name, meta_data=igu_data.meta_data)
+                igu_data.compress_new_data(new_file_name)
                 igu_data.meta_data['new_file_name'] = new_file_name
                 igu_data.meta_data['date_to_download'] = igu_data.gps_info.timedelta_buffer.date()
+                igu_data.meta_data['day_of_year'] = igu_data.gps_info.total_days
                 igu_data.meta_data['downloaded_at'] = datetime.datetime.now()
                 res = res.append(igu_data.meta_data, ignore_index=True)
             else:
