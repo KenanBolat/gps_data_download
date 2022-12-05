@@ -66,10 +66,18 @@ class IGU(object):
         self.password = EARTH_DATA_PASSWORD
         self.name_match_string = r'[0-9]{5}_[0-9]{2}'
         self.meta_data = None
+        self.igu_folder = 'igu_files'
+        self.temp = 'tmp_files'
         self.data = {"Date": self.gps_info.timedelta_buffer,
                      "Year": self.gps_info.year,
                      "Day of The Year": self.gps_info.total_days,
                      "GPS Week": self.gps_info.noWeeks}
+
+    def check_folders(self):
+        if not os.path.exists(f'./{self.igu_folder}'):
+            os.mkdir(f'./{self.igu_folder}')
+        if not os.path.exists(f'./{self.temp}'):
+            os.mkdir(f'./{self.temp}')
 
     def get_file(self, filename):
         url = f'{self.site[0]}/{self.gps_info.noWeeks}/{filename}'
@@ -100,32 +108,33 @@ class IGU(object):
     def rename_file(self, filename):
         new_file_name = "igu" + self.meta_data['name_string'][0] + ".sp3"
         os.rename(filename, new_file_name)
+        # shutil.move(filename, self.temp)
         return new_file_name
 
     def compress_new_data(self, filename, meta_data):
-        with open(filename, 'rb') as infile, gzip.open(os.path.join("igu_files", filename + ".Z"), "wb") as gzip_file:
-            gzip_file.writelines(infile)
-        print("Compressed")
 
-    @staticmethod
-    def uncompress(filename):
+        with open(filename, 'rb') as infile, \
+                gzip.open(os.path.join(self.igu_folder, filename + ".Z"), "wb") as gzip_file:
+            gzip_file.writelines(infile)
+
+        print("Compressed")
+        shutil.move(filename, self.temp)
+
+    def uncompress(self, filename):
         sp3_name = filename.split('.gz')[0].lower()
         with gzip.open(filename, 'rb') as f_in:
             with open(sp3_name, 'wb') as f_out:
                 shutil.copyfileobj(f_in, f_out)
+        shutil.move(filename, self.temp)
         return sp3_name
 
 
 if __name__ == '__main__':
     igu_data = IGU(2)
+    igu_data.check_folders()
 
     print(igu_data.data)
 
-    #
-    # print(igu_data.gps_info.timedelta_buffer,
-    #       igu_data.gps_info.year,
-    #       igu_data.gps_info.total_days,
-    #       igu_data.gps_info.noWeeks)
     for file_ in igu_data.gps_info.date_string_array:
 
         if igu_data.get_file(file_[0]):
@@ -134,10 +143,13 @@ if __name__ == '__main__':
             uncompressed_file = igu_data.uncompress(file_[0])
             igu_data.get_metadata_info(uncompressed_file)
             print(igu_data.meta_data)
-            if igu_data.meta_data['date_start'] < igu_data.gps_info.timedelta_buffer < igu_data.meta_data['date_end']:
+            if igu_data.meta_data['date_start'].date() <= \
+                    igu_data.gps_info.timedelta_buffer.date() <= \
+                    igu_data.meta_data['date_end'].date():
                 print('Date is relevant ')
                 new_file_name = igu_data.rename_file(uncompressed_file)
                 igu_data.compress_new_data(new_file_name, meta_data=igu_data.meta_data)
-                pass
+            else:
+                print('Date is not relevant !! check dates !! ')
         else:
             print(file_[0], "...Not Available")
