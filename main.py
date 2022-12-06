@@ -9,7 +9,6 @@ import gnsscal
 from dotenv import load_dotenv
 import pandas as pd
 from datetime import date
-import sys
 import argparse
 
 load_dotenv()
@@ -20,10 +19,9 @@ EARTH_DATA_PASSWORD = os.getenv('EARTH_DATA_PASSWORD')
 
 class GpsTime(object):
     def __init__(self, days):
-        self.epoch = date(1980, 1, 6)
         self.today = date.today()
         self.timedelta_buffer = None
-        self.noWeeks = None
+        self.no_weeks = None
         self.total_days = None
         self.year = None
         self.gps_time = None
@@ -42,7 +40,7 @@ class GpsTime(object):
 
         self.total_days = self.timedelta_buffer.strftime("%j")
         self.gps_time = gnsscal.date2gpswd(self.timedelta_buffer.date())
-        self.noWeeks = self.gps_time[0]
+        self.no_weeks = self.gps_time[0]
         self.year = self.timedelta_buffer.year
 
         for hour in self.hour_list:
@@ -57,7 +55,7 @@ class GpsTime(object):
 class IGU(object):
 
     def __init__(self, days):
-        self.site = ['https://cddis.nasa.gov/archive/gnss/products/']
+        self.site = ['https://cddis.nasa.gov/archive/gnss/products']
         self.days_count = days
         self.log_folder = 'log'
         self.gps_info = GpsTime(self.days_count).form_info()
@@ -70,28 +68,40 @@ class IGU(object):
         self.data = {"Date": self.gps_info.timedelta_buffer,
                      "Year": self.gps_info.year,
                      "Day of The Year": self.gps_info.total_days,
-                     "GPS Week": self.gps_info.noWeeks}
+                     "GPS Week": self.gps_info.no_weeks}
+        self.folders = [self.igu_folder,
+                        self.log_folder,
+                        self.temp]
 
-    def check_folders(self):
-        if not os.path.exists(f'./{self.igu_folder}'):
-            os.mkdir(f'./{self.igu_folder}')
-        if not os.path.exists(f'./{self.temp}'):
-            os.mkdir(f'./{self.temp}')
-        if not os.path.exists(f'./{self.log_folder}'):
-            os.mkdir(f'./{self.log_folder}')
-
-    def get_file(self, filename):
-        url = f'{self.site[0]}/{self.gps_info.noWeeks}/{filename}'
+    def check_connection(self):
+        url = self.site[0]
         with requests.Session() as session:
             session.auth = (self.user_name, self.password)
             r1 = session.request('get', url)
             r = session.get(r1.url, auth=(self.user_name, self.password))
-            if r.ok:
-                with open(filename, 'wb') as file:
-                    file.write(r.content)
-                    return True
-            else:
-                return False
+            assert r.ok, "There is no connection!!! Check remote site address!!!"
+            return True
+
+    def check_folders(self):
+        for folder in self.folders:
+            if not os.path.exists(f'./{folder}'):
+                os.mkdir(f'./{folder}')
+
+    def get_file(self, filename):
+
+        if self.check_connection():
+
+            url = f'{self.site[0]}/{self.gps_info.no_weeks}/{filename}'
+            with requests.Session() as session:
+                session.auth = (self.user_name, self.password)
+                r1 = session.request('get', url)
+                r = session.get(r1.url, auth=(self.user_name, self.password))
+                if r.ok:
+                    with open(filename, 'wb') as file:
+                        file.write(r.content)
+                        return True
+                else:
+                    return False
 
     def get_metadata_info(self, filename):
 
@@ -102,13 +112,13 @@ class IGU(object):
                            re.search(self.name_match_string, row)]
             df = pd.DataFrame(dates, columns=['Date'])
             self.meta_data = {"file_name": filename,
-                              "name_string": name_string,
+                              "name_string": name_string[0],
                               "date_start": df.Date.min(),
                               "date_end": df.Date.max(),
                               }
 
     def rename_file(self, filename):
-        new_name = "igu" + self.meta_data['name_string'][0] + ".sp3"
+        new_name = "igu" + self.meta_data['name_string'] + ".sp3"
         os.rename(filename, new_name)
         # shutil.move(filename, self.temp)
         return new_name
@@ -119,7 +129,6 @@ class IGU(object):
                 gzip.open(os.path.join(self.igu_folder, filename + ".Z"), "wb") as gzip_file:
             gzip_file.writelines(infile)
 
-        print("Compressed")
         shutil.move(os.path.join('./', filename), os.path.join(self.temp, filename))
 
     def uncompress(self, filename):
@@ -167,7 +176,6 @@ if __name__ == '__main__':
             if igu_data.meta_data['date_start'].date() <= \
                     igu_data.gps_info.timedelta_buffer.date() <= \
                     igu_data.meta_data['date_end'].date():
-                print('Date is relevant ')
                 new_file_name = igu_data.rename_file(uncompressed_file)
                 igu_data.compress_new_data(new_file_name)
                 igu_data.meta_data['new_file_name'] = new_file_name
@@ -179,5 +187,5 @@ if __name__ == '__main__':
                 print('Date is not relevant !! check dates !! ')
         else:
             print(file_[0], "...Not Available")
-
-    res.to_csv(os.path.join(igu_data.log_folder, 'log_' + datetime.datetime.today().strftime("%Y%m%d") + '.csv'))
+    log_file = os.path.join(igu_data.log_folder, 'log_' + datetime.datetime.today().strftime("%Y%m%d") + '.log')
+    res.to_csv(log_file, mode='a', header=not os.path.exists(log_file))
