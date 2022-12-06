@@ -136,10 +136,14 @@ if __name__ == '__main__':
     # 2 days before
     # 3 days before
     parser = argparse.ArgumentParser()
-    parser.add_argument('--day', type=int, required=True)
+    parser.add_argument('-d', type=int, required=False)
     args = parser.parse_args()
+    if args.d is None:
+        day_to_look = 1
+    else:
+        day_to_look = args.d
 
-    igu_data = IGU(args.day)
+    igu_data = IGU(day_to_look)
     igu_data.check_folders()
     res = pd.DataFrame(columns=['file_name',
                                 'name_string',
