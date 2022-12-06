@@ -9,6 +9,8 @@ import gnsscal
 from dotenv import load_dotenv
 import pandas as pd
 from datetime import date
+import sys
+import argparse
 
 load_dotenv()
 
@@ -130,7 +132,14 @@ class IGU(object):
 
 
 if __name__ == '__main__':
-    igu_data = IGU(3)
+    # day 1 yesterday
+    # 2 days before
+    # 3 days before
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--day', type=int, required=True)
+    args = parser.parse_args()
+
+    igu_data = IGU(args.day)
     igu_data.check_folders()
     res = pd.DataFrame(columns=['file_name',
                                 'name_string',
