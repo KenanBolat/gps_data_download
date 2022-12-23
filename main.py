@@ -10,6 +10,7 @@ from dotenv import load_dotenv
 import pandas as pd
 from datetime import date
 import argparse
+from lxml import html
 
 load_dotenv()
 
@@ -140,12 +141,69 @@ class IGU(object):
         return sp3_name
 
 
+class BULLETIN(object):
+    def __init__(self):
+        # Earth orientation parameters
+        self.bulletin_a_folder = 'bulletin_a/'
+        self.bulletin_b_folder = 'bulletin_b/'
+        self.bulletin_c_folder = 'bulletin_c/'
+        self.folders = [self.bulletin_a_folder,
+                        self.bulletin_b_folder,
+                        self.bulletin_c_folder]
+        self.eop_link = ["https://datacenter.iers.org/availableVersions.php?id=6"]
+        self.xpath_tags = {
+            'eop_date': '//*[@id="content"]/table/tbody/tr[2]/td[2]/span',
+            'eop_link': '/html/body/div[1]/div/table/tbody/tr[2]/td[5]/a/@href',
+        }
+
+    def check_folders(self):
+        for folder in self.folders:
+            if not os.path.exists(f'./{folder}'):
+                os.mkdir(f'./{folder}')
+
+    @staticmethod
+    def get_response(url):
+        response = requests.get(url)
+        tree = html.fromstring(response.content)
+        return tree
+
+    @staticmethod
+    def get_match(tree, tag):
+        return tree.xpath(tag)
+
+    def get_data(self):
+        self.check_folders()
+        tree = self.get_response(self.eop_link[0])
+        element_date = self.get_match(tree, tag=self.xpath_tags['eop_date'])
+        element_link = self.get_match(tree, tag=self.xpath_tags['eop_link'])
+        print('date::', element_date[0].text, "::link::", element_link[0])
+        data = [element_date, element_link[0]]
+        assert None not in data, "Does not match any result in a row"
+        response = requests.get(element_link[0])
+
+        # If the request is successful
+        if response.status_code == 200:
+            # Get the content of the response (the XML file)
+            xml_content = response.content
+
+            # Save the XML file to a local file
+            with open(os.path.join('./', self.bulletin_a_folder) + element_link[0].split('/')[-1], "wb") as f:
+                f.write(xml_content)
+
+        else:
+            print("Failed to download XML file")
+        return data
+
+
 if __name__ == '__main__':
     # day 1 yesterday
     # 2 days before
     # 3 days before
     parser = argparse.ArgumentParser()
     parser.add_argument('-d', type=int, required=False)
+    parser.add_argument('-a', '--bulletin-a', action="store_true", required=False)
+    parser.add_argument('-b', '--bulletin-b', action="store_true", required=False)
+    parser.add_argument('-c', '--bulletin-c', action="store_true", required=False)
     args = parser.parse_args()
     if args.d is None:
         day_to_look = 1
@@ -189,3 +247,6 @@ if __name__ == '__main__':
             print(file_[0], "...Not Available")
     log_file = os.path.join(igu_data.log_folder, 'log_' + datetime.datetime.today().strftime("%Y%m%d") + '.log')
     res.to_csv(log_file, mode='a', header=not os.path.exists(log_file))
+    if args.bulletin_a:
+        bul = BULLETIN()
+        bul.get_data()

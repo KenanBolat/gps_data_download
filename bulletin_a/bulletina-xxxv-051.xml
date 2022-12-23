@@ -1,0 +1,6621 @@
+<?xml version="1.0" encoding="UTF-8"?><EOP xmlns="http://www.iers.org/2003/schema/iers">
+<version>
+<product>BulletinA</product>
+<date>2022-12-22</date>
+<volume>XXXV</volume>
+<number>051</number>
+</version>
+<metaFileName/>
+<headerLine>
+<headerLineDate>
+<sYear>Year</sYear>
+<sMonth>Month</sMonth>
+<sDay>Day</sDay>
+<sTime>Time</sTime>
+<sMJD>MJD</sMJD>
+</headerLineDate>
+<headerLineEOP>
+<product source="BulletinA">
+<sX>X</sX>
+<ssigma_X>sigma_X</ssigma_X>
+<sY>Y</sY>
+<ssigma_Y>sigma_Y</ssigma_Y>
+<sUT1-UTC>UT1-UTC</sUT1-UTC>
+<ssigma_UT1-UTC>sigma_UT1-UTC</ssigma_UT1-UTC>
+<sdPsi>dPsi</sdPsi>
+<ssigma_dPsi>sigma_dPsi</ssigma_dPsi>
+<sdEpsilon>dEpsilon</sdEpsilon>
+<ssigma_dEpsilon>sigma_dEpsilon</ssigma_dEpsilon>
+<sdX>dX</sdX>
+<ssigma_dX>sigma_dX</ssigma_dX>
+<sdY>dY</sdY>
+<ssigma_dY>sigma_dY</ssigma_dY>
+</product>
+</headerLineEOP>
+<headerLineUnits>
+<product source="BulletinA">
+<X>arcsec</X>
+<sigma_X>arcsec</sigma_X>
+<Y>arcsec</Y>
+<sigma_Y>arcsec</sigma_Y>
+<UT1-UTC>sec</UT1-UTC>
+<sigma_UT1-UTC>sec</sigma_UT1-UTC>
+<dPsi>marcsec</dPsi>
+<sigma_dPsi>marcsec</sigma_dPsi>
+<dEpsilon>marcsec</dEpsilon>
+<sigma_dEpsilon>marcsec</sigma_dEpsilon>
+<dX>marcsec</dX>
+<sigma_dX>marcsec</sigma_dX>
+<dY>marcsec</dY>
+<sigma_dY>marcsec</sigma_dY>
+</product>
+</headerLineUnits>
+</headerLine>
+<data product="BulletinA" source="BulletinA">
+<timeSeries>
+<time>
+<dateYear>2022</dateYear>
+<dateMonth>12</dateMonth>
+<dateDay>03</dateDay>
+<MJD>59916</MJD>
+</time>
+<dataEOP>
+<nutation type="rapid">
+<dPsi>-111.61</dPsi>
+<sigma_dPsi>0.79</sigma_dPsi>
+<dEpsilon>-5.92</dEpsilon>
+<sigma_dEpsilon>0.11</sigma_dEpsilon>
+<dX>0.306</dX>
+<sigma_dX>0.313</sigma_dX>
+<dY>-0.131</dY>
+<sigma_dY>0.111</sigma_dY>
+</nutation>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2022</dateYear>
+<dateMonth>12</dateMonth>
+<dateDay>04</dateDay>
+<MJD>59917</MJD>
+</time>
+<dataEOP>
+<nutation type="rapid">
+<dPsi>-111.75</dPsi>
+<sigma_dPsi>0.78</sigma_dPsi>
+<dEpsilon>-5.75</dEpsilon>
+<sigma_dEpsilon>0.14</sigma_dEpsilon>
+<dX>0.312</dX>
+<sigma_dX>0.310</sigma_dX>
+<dY>-0.139</dY>
+<sigma_dY>0.136</sigma_dY>
+</nutation>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2022</dateYear>
+<dateMonth>12</dateMonth>
+<dateDay>05</dateDay>
+<MJD>59918</MJD>
+</time>
+<dataEOP>
+<nutation type="rapid">
+<dPsi>-111.85</dPsi>
+<sigma_dPsi>0.78</sigma_dPsi>
+<dEpsilon>-5.60</dEpsilon>
+<sigma_dEpsilon>0.14</sigma_dEpsilon>
+<dX>0.323</dX>
+<sigma_dX>0.310</sigma_dX>
+<dY>-0.147</dY>
+<sigma_dY>0.136</sigma_dY>
+</nutation>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2022</dateYear>
+<dateMonth>12</dateMonth>
+<dateDay>06</dateDay>
+<MJD>59919</MJD>
+</time>
+<dataEOP>
+<nutation type="rapid">
+<dPsi>-111.77</dPsi>
+<sigma_dPsi>1.07</sigma_dPsi>
+<dEpsilon>-5.51</dEpsilon>
+<sigma_dEpsilon>0.15</sigma_dEpsilon>
+<dX>0.334</dX>
+<sigma_dX>0.427</sigma_dX>
+<dY>-0.154</dY>
+<sigma_dY>0.149</sigma_dY>
+</nutation>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2022</dateYear>
+<dateMonth>12</dateMonth>
+<dateDay>07</dateDay>
+<MJD>59920</MJD>
+</time>
+<dataEOP>
+<nutation type="rapid">
+<dPsi>-111.55</dPsi>
+<sigma_dPsi>1.07</sigma_dPsi>
+<dEpsilon>-5.57</dEpsilon>
+<sigma_dEpsilon>0.15</sigma_dEpsilon>
+<dX>0.342</dX>
+<sigma_dX>0.427</sigma_dX>
+<dY>-0.161</dY>
+<sigma_dY>0.149</sigma_dY>
+</nutation>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2022</dateYear>
+<dateMonth>12</dateMonth>
+<dateDay>08</dateDay>
+<MJD>59921</MJD>
+</time>
+<dataEOP>
+<nutation type="rapid">
+<dPsi>-111.35</dPsi>
+<sigma_dPsi>1.07</sigma_dPsi>
+<dEpsilon>-5.80</dEpsilon>
+<sigma_dEpsilon>0.15</sigma_dEpsilon>
+<dX>0.346</dX>
+<sigma_dX>0.427</sigma_dX>
+<dY>-0.168</dY>
+<sigma_dY>0.149</sigma_dY>
+</nutation>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2022</dateYear>
+<dateMonth>12</dateMonth>
+<dateDay>09</dateDay>
+<MJD>59922</MJD>
+</time>
+<dataEOP>
+<nutation type="rapid">
+<dPsi>-111.27</dPsi>
+<sigma_dPsi>1.07</sigma_dPsi>
+<dEpsilon>-6.06</dEpsilon>
+<sigma_dEpsilon>0.15</sigma_dEpsilon>
+<dX>0.347</dX>
+<sigma_dX>0.427</sigma_dX>
+<dY>-0.175</dY>
+<sigma_dY>0.149</sigma_dY>
+</nutation>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2022</dateYear>
+<dateMonth>12</dateMonth>
+<dateDay>10</dateDay>
+<MJD>59923</MJD>
+</time>
+<dataEOP>
+<nutation type="rapid">
+<dPsi>-111.25</dPsi>
+<sigma_dPsi>0.32</sigma_dPsi>
+<dEpsilon>-6.20</dEpsilon>
+<sigma_dEpsilon>0.16</sigma_dEpsilon>
+<dX>0.345</dX>
+<sigma_dX>0.128</sigma_dX>
+<dY>-0.182</dY>
+<sigma_dY>0.160</sigma_dY>
+</nutation>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2022</dateYear>
+<dateMonth>12</dateMonth>
+<dateDay>11</dateDay>
+<MJD>59924</MJD>
+</time>
+<dataEOP>
+<nutation type="rapid">
+<dPsi>-111.17</dPsi>
+<sigma_dPsi>0.77</sigma_dPsi>
+<dEpsilon>-6.19</dEpsilon>
+<sigma_dEpsilon>0.20</sigma_dEpsilon>
+<dX>0.342</dX>
+<sigma_dX>0.305</sigma_dX>
+<dY>-0.190</dY>
+<sigma_dY>0.202</sigma_dY>
+</nutation>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2022</dateYear>
+<dateMonth>12</dateMonth>
+<dateDay>12</dateDay>
+<MJD>59925</MJD>
+</time>
+<dataEOP>
+<nutation type="rapid">
+<dPsi>-110.97</dPsi>
+<sigma_dPsi>0.77</sigma_dPsi>
+<dEpsilon>-6.16</dEpsilon>
+<sigma_dEpsilon>0.20</sigma_dEpsilon>
+<dX>0.337</dX>
+<sigma_dX>0.305</sigma_dX>
+<dY>-0.197</dY>
+<sigma_dY>0.202</sigma_dY>
+</nutation>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2022</dateYear>
+<dateMonth>12</dateMonth>
+<dateDay>13</dateDay>
+<MJD>59926</MJD>
+</time>
+<dataEOP>
+<nutation type="rapid">
+<dPsi>-110.69</dPsi>
+<sigma_dPsi>0.77</sigma_dPsi>
+<dEpsilon>-6.18</dEpsilon>
+<sigma_dEpsilon>0.20</sigma_dEpsilon>
+<dX>0.331</dX>
+<sigma_dX>0.305</sigma_dX>
+<dY>-0.204</dY>
+<sigma_dY>0.202</sigma_dY>
+</nutation>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2022</dateYear>
+<dateMonth>12</dateMonth>
+<dateDay>16</dateDay>
+<MJD>59929</MJD>
+</time>
+<dataEOP>
+<pole type="rapid">
+<X>0.10524</X>
+<sigma_X>.00009</sigma_X>
+<Y>0.19161</Y>
+<sigma_Y>.00009</sigma_Y>
+</pole>
+<UT type="rapid">
+<UT1-UTC>-0.017078</UT1-UTC>
+<sigma_UT1-UTC>0.000012</sigma_UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2022</dateYear>
+<dateMonth>12</dateMonth>
+<dateDay>17</dateDay>
+<MJD>59930</MJD>
+</time>
+<dataEOP>
+<pole type="rapid">
+<X>0.10262</X>
+<sigma_X>.00009</sigma_X>
+<Y>0.19217</Y>
+<sigma_Y>.00009</sigma_Y>
+</pole>
+<UT type="rapid">
+<UT1-UTC>-0.017268</UT1-UTC>
+<sigma_UT1-UTC>0.000023</sigma_UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2022</dateYear>
+<dateMonth>12</dateMonth>
+<dateDay>18</dateDay>
+<MJD>59931</MJD>
+</time>
+<dataEOP>
+<pole type="rapid">
+<X>0.10023</X>
+<sigma_X>.00009</sigma_X>
+<Y>0.19249</Y>
+<sigma_Y>.00009</sigma_Y>
+</pole>
+<UT type="rapid">
+<UT1-UTC>-0.017533</UT1-UTC>
+<sigma_UT1-UTC>0.000026</sigma_UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2022</dateYear>
+<dateMonth>12</dateMonth>
+<dateDay>19</dateDay>
+<MJD>59932</MJD>
+</time>
+<dataEOP>
+<pole type="rapid">
+<X>0.09828</X>
+<sigma_X>.00009</sigma_X>
+<Y>0.19281</Y>
+<sigma_Y>.00009</sigma_Y>
+</pole>
+<UT type="rapid">
+<UT1-UTC>-0.017787</UT1-UTC>
+<sigma_UT1-UTC>0.000017</sigma_UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2022</dateYear>
+<dateMonth>12</dateMonth>
+<dateDay>20</dateDay>
+<MJD>59933</MJD>
+</time>
+<dataEOP>
+<pole type="rapid">
+<X>0.09681</X>
+<sigma_X>.00009</sigma_X>
+<Y>0.19310</Y>
+<sigma_Y>.00009</sigma_Y>
+</pole>
+<UT type="rapid">
+<UT1-UTC>-0.017989</UT1-UTC>
+<sigma_UT1-UTC>0.000018</sigma_UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2022</dateYear>
+<dateMonth>12</dateMonth>
+<dateDay>21</dateDay>
+<MJD>59934</MJD>
+</time>
+<dataEOP>
+<pole type="rapid">
+<X>0.09577</X>
+<sigma_X>.00009</sigma_X>
+<Y>0.19338</Y>
+<sigma_Y>.00009</sigma_Y>
+</pole>
+<UT type="rapid">
+<UT1-UTC>-0.018108</UT1-UTC>
+<sigma_UT1-UTC>0.000015</sigma_UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2022</dateYear>
+<dateMonth>12</dateMonth>
+<dateDay>22</dateDay>
+<MJD>59935</MJD>
+</time>
+<dataEOP>
+<pole type="rapid">
+<X>0.09484</X>
+<sigma_X>.00009</sigma_X>
+<Y>0.19405</Y>
+<sigma_Y>.00009</sigma_Y>
+</pole>
+<UT type="rapid">
+<UT1-UTC>-0.018076</UT1-UTC>
+<sigma_UT1-UTC>0.000014</sigma_UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2022</dateYear>
+<dateMonth>12</dateMonth>
+<dateDay>23</dateDay>
+<MJD>59936</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0935</X>
+<Y>0.1950</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.01785</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2022</dateYear>
+<dateMonth>12</dateMonth>
+<dateDay>24</dateDay>
+<MJD>59937</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0918</X>
+<Y>0.1962</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.01750</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2022</dateYear>
+<dateMonth>12</dateMonth>
+<dateDay>25</dateDay>
+<MJD>59938</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0899</X>
+<Y>0.1973</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.01718</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2022</dateYear>
+<dateMonth>12</dateMonth>
+<dateDay>26</dateDay>
+<MJD>59939</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0878</X>
+<Y>0.1984</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.01704</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2022</dateYear>
+<dateMonth>12</dateMonth>
+<dateDay>27</dateDay>
+<MJD>59940</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0856</X>
+<Y>0.1995</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.01715</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2022</dateYear>
+<dateMonth>12</dateMonth>
+<dateDay>28</dateDay>
+<MJD>59941</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0834</X>
+<Y>0.2005</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.01751</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2022</dateYear>
+<dateMonth>12</dateMonth>
+<dateDay>29</dateDay>
+<MJD>59942</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0812</X>
+<Y>0.2016</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.01802</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2022</dateYear>
+<dateMonth>12</dateMonth>
+<dateDay>30</dateDay>
+<MJD>59943</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0791</X>
+<Y>0.2027</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.01859</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2022</dateYear>
+<dateMonth>12</dateMonth>
+<dateDay>31</dateDay>
+<MJD>59944</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0769</X>
+<Y>0.2039</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.01909</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>01</dateMonth>
+<dateDay>01</dateDay>
+<MJD>59945</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0748</X>
+<Y>0.2052</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.01945</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>01</dateMonth>
+<dateDay>02</dateDay>
+<MJD>59946</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0726</X>
+<Y>0.2065</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.01959</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>01</dateMonth>
+<dateDay>03</dateDay>
+<MJD>59947</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0705</X>
+<Y>0.2078</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.01950</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>01</dateMonth>
+<dateDay>04</dateDay>
+<MJD>59948</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0684</X>
+<Y>0.2092</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.01919</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>01</dateMonth>
+<dateDay>05</dateDay>
+<MJD>59949</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0662</X>
+<Y>0.2105</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.01867</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>01</dateMonth>
+<dateDay>06</dateDay>
+<MJD>59950</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0641</X>
+<Y>0.2120</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.01800</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>01</dateMonth>
+<dateDay>07</dateDay>
+<MJD>59951</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0620</X>
+<Y>0.2134</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.01727</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>01</dateMonth>
+<dateDay>08</dateDay>
+<MJD>59952</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0600</X>
+<Y>0.2149</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.01657</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>01</dateMonth>
+<dateDay>09</dateDay>
+<MJD>59953</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0580</X>
+<Y>0.2164</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.01596</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>01</dateMonth>
+<dateDay>10</dateDay>
+<MJD>59954</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0560</X>
+<Y>0.2179</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.01551</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>01</dateMonth>
+<dateDay>11</dateDay>
+<MJD>59955</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0540</X>
+<Y>0.2195</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.01524</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>01</dateMonth>
+<dateDay>12</dateDay>
+<MJD>59956</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0520</X>
+<Y>0.2211</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.01513</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>01</dateMonth>
+<dateDay>13</dateDay>
+<MJD>59957</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0501</X>
+<Y>0.2227</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.01518</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>01</dateMonth>
+<dateDay>14</dateDay>
+<MJD>59958</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0482</X>
+<Y>0.2244</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.01532</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>01</dateMonth>
+<dateDay>15</dateDay>
+<MJD>59959</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0463</X>
+<Y>0.2261</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.01550</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>01</dateMonth>
+<dateDay>16</dateDay>
+<MJD>59960</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0445</X>
+<Y>0.2278</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.01565</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>01</dateMonth>
+<dateDay>17</dateDay>
+<MJD>59961</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0426</X>
+<Y>0.2295</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.01569</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>01</dateMonth>
+<dateDay>18</dateDay>
+<MJD>59962</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0409</X>
+<Y>0.2313</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.01556</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>01</dateMonth>
+<dateDay>19</dateDay>
+<MJD>59963</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0391</X>
+<Y>0.2331</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.01524</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>01</dateMonth>
+<dateDay>20</dateDay>
+<MJD>59964</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0374</X>
+<Y>0.2349</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.01479</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>01</dateMonth>
+<dateDay>21</dateDay>
+<MJD>59965</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0357</X>
+<Y>0.2368</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.01435</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>01</dateMonth>
+<dateDay>22</dateDay>
+<MJD>59966</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0340</X>
+<Y>0.2386</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.01405</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>01</dateMonth>
+<dateDay>23</dateDay>
+<MJD>59967</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0324</X>
+<Y>0.2405</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.01400</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>01</dateMonth>
+<dateDay>24</dateDay>
+<MJD>59968</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0308</X>
+<Y>0.2424</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.01426</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>01</dateMonth>
+<dateDay>25</dateDay>
+<MJD>59969</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0292</X>
+<Y>0.2444</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.01476</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>01</dateMonth>
+<dateDay>26</dateDay>
+<MJD>59970</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0277</X>
+<Y>0.2463</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.01539</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>01</dateMonth>
+<dateDay>27</dateDay>
+<MJD>59971</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0262</X>
+<Y>0.2483</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.01600</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>01</dateMonth>
+<dateDay>28</dateDay>
+<MJD>59972</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0247</X>
+<Y>0.2503</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.01649</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>01</dateMonth>
+<dateDay>29</dateDay>
+<MJD>59973</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0233</X>
+<Y>0.2524</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.01676</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>01</dateMonth>
+<dateDay>30</dateDay>
+<MJD>59974</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0219</X>
+<Y>0.2544</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.01680</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>01</dateMonth>
+<dateDay>31</dateDay>
+<MJD>59975</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0205</X>
+<Y>0.2565</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.01663</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>02</dateMonth>
+<dateDay>01</dateDay>
+<MJD>59976</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0192</X>
+<Y>0.2586</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.01629</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>02</dateMonth>
+<dateDay>02</dateDay>
+<MJD>59977</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0179</X>
+<Y>0.2607</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.01585</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>02</dateMonth>
+<dateDay>03</dateDay>
+<MJD>59978</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0166</X>
+<Y>0.2628</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.01538</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>02</dateMonth>
+<dateDay>04</dateDay>
+<MJD>59979</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0154</X>
+<Y>0.2649</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.01495</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>02</dateMonth>
+<dateDay>05</dateDay>
+<MJD>59980</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0142</X>
+<Y>0.2671</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.01463</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>02</dateMonth>
+<dateDay>06</dateDay>
+<MJD>59981</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0131</X>
+<Y>0.2693</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.01446</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>02</dateMonth>
+<dateDay>07</dateDay>
+<MJD>59982</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0120</X>
+<Y>0.2715</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.01448</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>02</dateMonth>
+<dateDay>08</dateDay>
+<MJD>59983</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0109</X>
+<Y>0.2737</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.01468</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>02</dateMonth>
+<dateDay>09</dateDay>
+<MJD>59984</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0099</X>
+<Y>0.2759</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.01504</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>02</dateMonth>
+<dateDay>10</dateDay>
+<MJD>59985</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0089</X>
+<Y>0.2781</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.01550</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>02</dateMonth>
+<dateDay>11</dateDay>
+<MJD>59986</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0079</X>
+<Y>0.2804</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.01600</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>02</dateMonth>
+<dateDay>12</dateDay>
+<MJD>59987</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0070</X>
+<Y>0.2827</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.01646</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>02</dateMonth>
+<dateDay>13</dateDay>
+<MJD>59988</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0061</X>
+<Y>0.2849</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.01679</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>02</dateMonth>
+<dateDay>14</dateDay>
+<MJD>59989</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0053</X>
+<Y>0.2872</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.01695</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>02</dateMonth>
+<dateDay>15</dateDay>
+<MJD>59990</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0045</X>
+<Y>0.2895</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.01691</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>02</dateMonth>
+<dateDay>16</dateDay>
+<MJD>59991</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0037</X>
+<Y>0.2919</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.01671</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>02</dateMonth>
+<dateDay>17</dateDay>
+<MJD>59992</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0030</X>
+<Y>0.2942</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.01643</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>02</dateMonth>
+<dateDay>18</dateDay>
+<MJD>59993</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0023</X>
+<Y>0.2965</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.01623</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>02</dateMonth>
+<dateDay>19</dateDay>
+<MJD>59994</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0016</X>
+<Y>0.2989</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.01625</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>02</dateMonth>
+<dateDay>20</dateDay>
+<MJD>59995</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0010</X>
+<Y>0.3012</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.01657</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>02</dateMonth>
+<dateDay>21</dateDay>
+<MJD>59996</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0004</X>
+<Y>0.3036</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.01720</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>02</dateMonth>
+<dateDay>22</dateDay>
+<MJD>59997</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>-0.0001</X>
+<Y>0.3059</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.01803</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>02</dateMonth>
+<dateDay>23</dateDay>
+<MJD>59998</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>-0.0006</X>
+<Y>0.3083</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.01891</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>02</dateMonth>
+<dateDay>24</dateDay>
+<MJD>59999</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>-0.0010</X>
+<Y>0.3107</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.01970</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>02</dateMonth>
+<dateDay>25</dateDay>
+<MJD>60000</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>-0.0015</X>
+<Y>0.3131</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.02029</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>02</dateMonth>
+<dateDay>26</dateDay>
+<MJD>60001</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>-0.0018</X>
+<Y>0.3155</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.02063</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>02</dateMonth>
+<dateDay>27</dateDay>
+<MJD>60002</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>-0.0022</X>
+<Y>0.3179</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.02072</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>02</dateMonth>
+<dateDay>28</dateDay>
+<MJD>60003</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>-0.0025</X>
+<Y>0.3203</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.02062</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>03</dateMonth>
+<dateDay>01</dateDay>
+<MJD>60004</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>-0.0027</X>
+<Y>0.3227</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.02038</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>03</dateMonth>
+<dateDay>02</dateDay>
+<MJD>60005</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>-0.0029</X>
+<Y>0.3251</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.02008</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>03</dateMonth>
+<dateDay>03</dateDay>
+<MJD>60006</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>-0.0031</X>
+<Y>0.3275</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.01978</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>03</dateMonth>
+<dateDay>04</dateDay>
+<MJD>60007</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>-0.0032</X>
+<Y>0.3299</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.01956</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>03</dateMonth>
+<dateDay>05</dateDay>
+<MJD>60008</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>-0.0033</X>
+<Y>0.3323</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.01949</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>03</dateMonth>
+<dateDay>06</dateDay>
+<MJD>60009</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>-0.0034</X>
+<Y>0.3347</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.01959</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>03</dateMonth>
+<dateDay>07</dateDay>
+<MJD>60010</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>-0.0034</X>
+<Y>0.3371</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.01989</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>03</dateMonth>
+<dateDay>08</dateDay>
+<MJD>60011</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>-0.0034</X>
+<Y>0.3396</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.02036</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>03</dateMonth>
+<dateDay>09</dateDay>
+<MJD>60012</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>-0.0033</X>
+<Y>0.3420</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.02096</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>03</dateMonth>
+<dateDay>10</dateDay>
+<MJD>60013</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>-0.0032</X>
+<Y>0.3444</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.02162</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>03</dateMonth>
+<dateDay>11</dateDay>
+<MJD>60014</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>-0.0030</X>
+<Y>0.3468</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.02226</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>03</dateMonth>
+<dateDay>12</dateDay>
+<MJD>60015</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>-0.0029</X>
+<Y>0.3492</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.02279</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>03</dateMonth>
+<dateDay>13</dateDay>
+<MJD>60016</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>-0.0026</X>
+<Y>0.3516</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.02316</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>03</dateMonth>
+<dateDay>14</dateDay>
+<MJD>60017</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>-0.0024</X>
+<Y>0.3540</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.02333</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>03</dateMonth>
+<dateDay>15</dateDay>
+<MJD>60018</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>-0.0021</X>
+<Y>0.3563</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.02333</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>03</dateMonth>
+<dateDay>16</dateDay>
+<MJD>60019</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>-0.0017</X>
+<Y>0.3587</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.02323</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>03</dateMonth>
+<dateDay>17</dateDay>
+<MJD>60020</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>-0.0013</X>
+<Y>0.3611</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.02316</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>03</dateMonth>
+<dateDay>18</dateDay>
+<MJD>60021</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>-0.0009</X>
+<Y>0.3635</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.02326</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>03</dateMonth>
+<dateDay>19</dateDay>
+<MJD>60022</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>-0.0005</X>
+<Y>0.3658</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.02364</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>03</dateMonth>
+<dateDay>20</dateDay>
+<MJD>60023</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0000</X>
+<Y>0.3682</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.02433</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>03</dateMonth>
+<dateDay>21</dateDay>
+<MJD>60024</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0006</X>
+<Y>0.3705</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.02528</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>03</dateMonth>
+<dateDay>22</dateDay>
+<MJD>60025</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0012</X>
+<Y>0.3728</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.02637</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>03</dateMonth>
+<dateDay>23</dateDay>
+<MJD>60026</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0018</X>
+<Y>0.3752</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.02744</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>03</dateMonth>
+<dateDay>24</dateDay>
+<MJD>60027</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0024</X>
+<Y>0.3775</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.02834</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>03</dateMonth>
+<dateDay>25</dateDay>
+<MJD>60028</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0031</X>
+<Y>0.3798</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.02898</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>03</dateMonth>
+<dateDay>26</dateDay>
+<MJD>60029</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0038</X>
+<Y>0.3821</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.02935</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>03</dateMonth>
+<dateDay>27</dateDay>
+<MJD>60030</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0046</X>
+<Y>0.3843</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.02948</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>03</dateMonth>
+<dateDay>28</dateDay>
+<MJD>60031</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0054</X>
+<Y>0.3866</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.02942</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>03</dateMonth>
+<dateDay>29</dateDay>
+<MJD>60032</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0063</X>
+<Y>0.3889</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.02927</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>03</dateMonth>
+<dateDay>30</dateDay>
+<MJD>60033</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0071</X>
+<Y>0.3911</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.02910</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>03</dateMonth>
+<dateDay>31</dateDay>
+<MJD>60034</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0080</X>
+<Y>0.3933</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.02898</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>04</dateMonth>
+<dateDay>01</dateDay>
+<MJD>60035</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0090</X>
+<Y>0.3955</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.02898</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>04</dateMonth>
+<dateDay>02</dateDay>
+<MJD>60036</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0100</X>
+<Y>0.3977</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.02914</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>04</dateMonth>
+<dateDay>03</dateDay>
+<MJD>60037</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0110</X>
+<Y>0.3999</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.02949</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>04</dateMonth>
+<dateDay>04</dateDay>
+<MJD>60038</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0121</X>
+<Y>0.4020</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.03002</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>04</dateMonth>
+<dateDay>05</dateDay>
+<MJD>60039</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0131</X>
+<Y>0.4042</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.03070</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>04</dateMonth>
+<dateDay>06</dateDay>
+<MJD>60040</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0143</X>
+<Y>0.4063</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.03144</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>04</dateMonth>
+<dateDay>07</dateDay>
+<MJD>60041</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0154</X>
+<Y>0.4084</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.03218</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>04</dateMonth>
+<dateDay>08</dateDay>
+<MJD>60042</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0166</X>
+<Y>0.4105</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.03280</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>04</dateMonth>
+<dateDay>09</dateDay>
+<MJD>60043</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0178</X>
+<Y>0.4125</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.03324</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>04</dateMonth>
+<dateDay>10</dateDay>
+<MJD>60044</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0191</X>
+<Y>0.4146</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.03350</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>04</dateMonth>
+<dateDay>11</dateDay>
+<MJD>60045</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0204</X>
+<Y>0.4166</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.03354</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>04</dateMonth>
+<dateDay>12</dateDay>
+<MJD>60046</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0217</X>
+<Y>0.4186</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.03346</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>04</dateMonth>
+<dateDay>13</dateDay>
+<MJD>60047</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0231</X>
+<Y>0.4206</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.03334</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>04</dateMonth>
+<dateDay>14</dateDay>
+<MJD>60048</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0244</X>
+<Y>0.4225</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.03332</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>04</dateMonth>
+<dateDay>15</dateDay>
+<MJD>60049</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0259</X>
+<Y>0.4245</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.03352</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>04</dateMonth>
+<dateDay>16</dateDay>
+<MJD>60050</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0273</X>
+<Y>0.4264</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.03400</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>04</dateMonth>
+<dateDay>17</dateDay>
+<MJD>60051</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0288</X>
+<Y>0.4283</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.03474</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>04</dateMonth>
+<dateDay>18</dateDay>
+<MJD>60052</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0303</X>
+<Y>0.4302</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.03565</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>04</dateMonth>
+<dateDay>19</dateDay>
+<MJD>60053</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0318</X>
+<Y>0.4320</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.03661</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>04</dateMonth>
+<dateDay>20</dateDay>
+<MJD>60054</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0334</X>
+<Y>0.4338</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.03747</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>04</dateMonth>
+<dateDay>21</dateDay>
+<MJD>60055</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0350</X>
+<Y>0.4356</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.03810</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>04</dateMonth>
+<dateDay>22</dateDay>
+<MJD>60056</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0366</X>
+<Y>0.4374</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.03845</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>04</dateMonth>
+<dateDay>23</dateDay>
+<MJD>60057</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0383</X>
+<Y>0.4391</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.03853</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>04</dateMonth>
+<dateDay>24</dateDay>
+<MJD>60058</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0400</X>
+<Y>0.4408</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.03838</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>04</dateMonth>
+<dateDay>25</dateDay>
+<MJD>60059</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0417</X>
+<Y>0.4425</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.03809</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>04</dateMonth>
+<dateDay>26</dateDay>
+<MJD>60060</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0434</X>
+<Y>0.4442</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.03774</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>04</dateMonth>
+<dateDay>27</dateDay>
+<MJD>60061</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0452</X>
+<Y>0.4458</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.03740</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>04</dateMonth>
+<dateDay>28</dateDay>
+<MJD>60062</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0469</X>
+<Y>0.4474</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.03716</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>04</dateMonth>
+<dateDay>29</dateDay>
+<MJD>60063</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0487</X>
+<Y>0.4490</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.03705</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>04</dateMonth>
+<dateDay>30</dateDay>
+<MJD>60064</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0506</X>
+<Y>0.4506</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.03712</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>05</dateMonth>
+<dateDay>01</dateDay>
+<MJD>60065</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0524</X>
+<Y>0.4521</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.03736</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>05</dateMonth>
+<dateDay>02</dateDay>
+<MJD>60066</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0543</X>
+<Y>0.4536</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.03776</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>05</dateMonth>
+<dateDay>03</dateDay>
+<MJD>60067</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0562</X>
+<Y>0.4550</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.03825</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>05</dateMonth>
+<dateDay>04</dateDay>
+<MJD>60068</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0581</X>
+<Y>0.4565</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.03876</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>05</dateMonth>
+<dateDay>05</dateDay>
+<MJD>60069</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0601</X>
+<Y>0.4579</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.03920</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>05</dateMonth>
+<dateDay>06</dateDay>
+<MJD>60070</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0620</X>
+<Y>0.4592</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.03947</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>05</dateMonth>
+<dateDay>07</dateDay>
+<MJD>60071</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0640</X>
+<Y>0.4606</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.03952</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>05</dateMonth>
+<dateDay>08</dateDay>
+<MJD>60072</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0660</X>
+<Y>0.4619</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.03933</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>05</dateMonth>
+<dateDay>09</dateDay>
+<MJD>60073</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0681</X>
+<Y>0.4632</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.03897</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>05</dateMonth>
+<dateDay>10</dateDay>
+<MJD>60074</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0701</X>
+<Y>0.4644</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.03853</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>05</dateMonth>
+<dateDay>11</dateDay>
+<MJD>60075</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0722</X>
+<Y>0.4656</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.03816</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>05</dateMonth>
+<dateDay>12</dateDay>
+<MJD>60076</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0743</X>
+<Y>0.4668</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.03796</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>05</dateMonth>
+<dateDay>13</dateDay>
+<MJD>60077</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0764</X>
+<Y>0.4679</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.03799</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>05</dateMonth>
+<dateDay>14</dateDay>
+<MJD>60078</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0785</X>
+<Y>0.4691</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.03827</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>05</dateMonth>
+<dateDay>15</dateDay>
+<MJD>60079</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0806</X>
+<Y>0.4701</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.03872</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>05</dateMonth>
+<dateDay>16</dateDay>
+<MJD>60080</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0828</X>
+<Y>0.4712</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.03924</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>05</dateMonth>
+<dateDay>17</dateDay>
+<MJD>60081</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0849</X>
+<Y>0.4722</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.03969</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>05</dateMonth>
+<dateDay>18</dateDay>
+<MJD>60082</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0871</X>
+<Y>0.4732</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.03997</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>05</dateMonth>
+<dateDay>19</dateDay>
+<MJD>60083</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0893</X>
+<Y>0.4741</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.03998</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>05</dateMonth>
+<dateDay>20</dateDay>
+<MJD>60084</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0915</X>
+<Y>0.4750</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.03972</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>05</dateMonth>
+<dateDay>21</dateDay>
+<MJD>60085</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0937</X>
+<Y>0.4759</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.03921</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>05</dateMonth>
+<dateDay>22</dateDay>
+<MJD>60086</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0959</X>
+<Y>0.4768</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.03851</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>05</dateMonth>
+<dateDay>23</dateDay>
+<MJD>60087</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.0982</X>
+<Y>0.4776</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.03771</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>05</dateMonth>
+<dateDay>24</dateDay>
+<MJD>60088</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.1004</X>
+<Y>0.4783</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.03689</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>05</dateMonth>
+<dateDay>25</dateDay>
+<MJD>60089</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.1027</X>
+<Y>0.4791</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.03613</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>05</dateMonth>
+<dateDay>26</dateDay>
+<MJD>60090</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.1049</X>
+<Y>0.4798</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.03548</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>05</dateMonth>
+<dateDay>27</dateDay>
+<MJD>60091</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.1072</X>
+<Y>0.4804</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.03499</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>05</dateMonth>
+<dateDay>28</dateDay>
+<MJD>60092</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.1095</X>
+<Y>0.4811</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.03465</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>05</dateMonth>
+<dateDay>29</dateDay>
+<MJD>60093</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.1118</X>
+<Y>0.4817</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.03446</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>05</dateMonth>
+<dateDay>30</dateDay>
+<MJD>60094</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.1141</X>
+<Y>0.4822</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.03438</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>05</dateMonth>
+<dateDay>31</dateDay>
+<MJD>60095</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.1164</X>
+<Y>0.4828</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.03434</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>06</dateMonth>
+<dateDay>01</dateDay>
+<MJD>60096</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.1187</X>
+<Y>0.4832</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.03426</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>06</dateMonth>
+<dateDay>02</dateDay>
+<MJD>60097</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.1210</X>
+<Y>0.4837</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.03404</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>06</dateMonth>
+<dateDay>03</dateDay>
+<MJD>60098</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.1234</X>
+<Y>0.4841</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.03362</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>06</dateMonth>
+<dateDay>04</dateDay>
+<MJD>60099</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.1257</X>
+<Y>0.4845</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.03296</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>06</dateMonth>
+<dateDay>05</dateDay>
+<MJD>60100</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.1280</X>
+<Y>0.4848</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.03208</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>06</dateMonth>
+<dateDay>06</dateDay>
+<MJD>60101</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.1304</X>
+<Y>0.4851</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.03109</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>06</dateMonth>
+<dateDay>07</dateDay>
+<MJD>60102</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.1327</X>
+<Y>0.4854</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.03012</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>06</dateMonth>
+<dateDay>08</dateDay>
+<MJD>60103</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.1350</X>
+<Y>0.4857</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.02930</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>06</dateMonth>
+<dateDay>09</dateDay>
+<MJD>60104</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.1374</X>
+<Y>0.4859</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.02872</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>06</dateMonth>
+<dateDay>10</dateDay>
+<MJD>60105</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.1397</X>
+<Y>0.4860</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.02837</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>06</dateMonth>
+<dateDay>11</dateDay>
+<MJD>60106</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.1420</X>
+<Y>0.4862</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.02819</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>06</dateMonth>
+<dateDay>12</dateDay>
+<MJD>60107</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.1444</X>
+<Y>0.4862</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.02809</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>06</dateMonth>
+<dateDay>13</dateDay>
+<MJD>60108</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.1467</X>
+<Y>0.4863</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.02794</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>06</dateMonth>
+<dateDay>14</dateDay>
+<MJD>60109</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.1490</X>
+<Y>0.4863</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.02763</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>06</dateMonth>
+<dateDay>15</dateDay>
+<MJD>60110</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.1514</X>
+<Y>0.4863</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.02708</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>06</dateMonth>
+<dateDay>16</dateDay>
+<MJD>60111</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.1537</X>
+<Y>0.4863</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.02627</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>06</dateMonth>
+<dateDay>17</dateDay>
+<MJD>60112</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.1560</X>
+<Y>0.4862</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.02521</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>06</dateMonth>
+<dateDay>18</dateDay>
+<MJD>60113</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.1583</X>
+<Y>0.4860</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.02396</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>06</dateMonth>
+<dateDay>19</dateDay>
+<MJD>60114</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.1606</X>
+<Y>0.4859</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.02259</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>06</dateMonth>
+<dateDay>20</dateDay>
+<MJD>60115</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.1629</X>
+<Y>0.4857</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.02119</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>06</dateMonth>
+<dateDay>21</dateDay>
+<MJD>60116</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.1652</X>
+<Y>0.4855</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.01983</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>06</dateMonth>
+<dateDay>22</dateDay>
+<MJD>60117</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.1675</X>
+<Y>0.4852</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.01859</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>06</dateMonth>
+<dateDay>23</dateDay>
+<MJD>60118</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.1698</X>
+<Y>0.4849</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.01751</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>06</dateMonth>
+<dateDay>24</dateDay>
+<MJD>60119</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.1721</X>
+<Y>0.4846</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.01660</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>06</dateMonth>
+<dateDay>25</dateDay>
+<MJD>60120</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.1743</X>
+<Y>0.4842</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.01586</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>06</dateMonth>
+<dateDay>26</dateDay>
+<MJD>60121</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.1766</X>
+<Y>0.4838</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.01525</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>06</dateMonth>
+<dateDay>27</dateDay>
+<MJD>60122</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.1788</X>
+<Y>0.4833</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.01473</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>06</dateMonth>
+<dateDay>28</dateDay>
+<MJD>60123</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.1811</X>
+<Y>0.4829</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.01421</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>06</dateMonth>
+<dateDay>29</dateDay>
+<MJD>60124</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.1833</X>
+<Y>0.4824</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.01363</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>06</dateMonth>
+<dateDay>30</dateDay>
+<MJD>60125</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.1855</X>
+<Y>0.4818</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.01288</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>07</dateMonth>
+<dateDay>01</dateDay>
+<MJD>60126</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.1877</X>
+<Y>0.4812</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.01192</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>07</dateMonth>
+<dateDay>02</dateDay>
+<MJD>60127</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.1899</X>
+<Y>0.4806</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.01074</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>07</dateMonth>
+<dateDay>03</dateDay>
+<MJD>60128</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.1920</X>
+<Y>0.4800</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.00939</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>07</dateMonth>
+<dateDay>04</dateDay>
+<MJD>60129</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.1942</X>
+<Y>0.4793</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.00802</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>07</dateMonth>
+<dateDay>05</dateDay>
+<MJD>60130</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.1963</X>
+<Y>0.4786</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.00677</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>07</dateMonth>
+<dateDay>06</dateDay>
+<MJD>60131</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.1985</X>
+<Y>0.4779</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.00575</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>07</dateMonth>
+<dateDay>07</dateDay>
+<MJD>60132</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2006</X>
+<Y>0.4771</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.00499</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>07</dateMonth>
+<dateDay>08</dateDay>
+<MJD>60133</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2027</X>
+<Y>0.4763</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.00445</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>07</dateMonth>
+<dateDay>09</dateDay>
+<MJD>60134</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2048</X>
+<Y>0.4755</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.00400</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>07</dateMonth>
+<dateDay>10</dateDay>
+<MJD>60135</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2068</X>
+<Y>0.4746</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.00351</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>07</dateMonth>
+<dateDay>11</dateDay>
+<MJD>60136</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2089</X>
+<Y>0.4737</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.00285</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>07</dateMonth>
+<dateDay>12</dateDay>
+<MJD>60137</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2109</X>
+<Y>0.4728</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.00194</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>07</dateMonth>
+<dateDay>13</dateDay>
+<MJD>60138</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2129</X>
+<Y>0.4718</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>-0.00075</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>07</dateMonth>
+<dateDay>14</dateDay>
+<MJD>60139</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2149</X>
+<Y>0.4708</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.00069</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>07</dateMonth>
+<dateDay>15</dateDay>
+<MJD>60140</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2168</X>
+<Y>0.4698</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.00234</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>07</dateMonth>
+<dateDay>16</dateDay>
+<MJD>60141</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2188</X>
+<Y>0.4687</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.00411</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>07</dateMonth>
+<dateDay>17</dateDay>
+<MJD>60142</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2207</X>
+<Y>0.4677</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.00592</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>07</dateMonth>
+<dateDay>18</dateDay>
+<MJD>60143</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2226</X>
+<Y>0.4666</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.00769</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>07</dateMonth>
+<dateDay>19</dateDay>
+<MJD>60144</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2245</X>
+<Y>0.4654</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.00934</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>07</dateMonth>
+<dateDay>20</dateDay>
+<MJD>60145</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2263</X>
+<Y>0.4642</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.01082</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>07</dateMonth>
+<dateDay>21</dateDay>
+<MJD>60146</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2282</X>
+<Y>0.4631</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.01211</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>07</dateMonth>
+<dateDay>22</dateDay>
+<MJD>60147</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2300</X>
+<Y>0.4618</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.01323</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>07</dateMonth>
+<dateDay>23</dateDay>
+<MJD>60148</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2318</X>
+<Y>0.4606</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.01420</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>07</dateMonth>
+<dateDay>24</dateDay>
+<MJD>60149</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2335</X>
+<Y>0.4593</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.01509</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>07</dateMonth>
+<dateDay>25</dateDay>
+<MJD>60150</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2353</X>
+<Y>0.4580</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.01594</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>07</dateMonth>
+<dateDay>26</dateDay>
+<MJD>60151</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2370</X>
+<Y>0.4567</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.01682</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>07</dateMonth>
+<dateDay>27</dateDay>
+<MJD>60152</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2386</X>
+<Y>0.4553</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.01780</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>07</dateMonth>
+<dateDay>28</dateDay>
+<MJD>60153</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2403</X>
+<Y>0.4540</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.01895</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>07</dateMonth>
+<dateDay>29</dateDay>
+<MJD>60154</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2419</X>
+<Y>0.4526</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.02030</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>07</dateMonth>
+<dateDay>30</dateDay>
+<MJD>60155</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2435</X>
+<Y>0.4511</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.02182</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>07</dateMonth>
+<dateDay>31</dateDay>
+<MJD>60156</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2451</X>
+<Y>0.4497</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.02337</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>08</dateMonth>
+<dateDay>01</dateDay>
+<MJD>60157</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2467</X>
+<Y>0.4482</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.02479</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>08</dateMonth>
+<dateDay>02</dateDay>
+<MJD>60158</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2482</X>
+<Y>0.4467</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.02593</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>08</dateMonth>
+<dateDay>03</dateDay>
+<MJD>60159</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2497</X>
+<Y>0.4452</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.02667</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>08</dateMonth>
+<dateDay>04</dateDay>
+<MJD>60160</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2512</X>
+<Y>0.4437</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.02706</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>08</dateMonth>
+<dateDay>05</dateDay>
+<MJD>60161</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2526</X>
+<Y>0.4421</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.02721</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>08</dateMonth>
+<dateDay>06</dateDay>
+<MJD>60162</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2540</X>
+<Y>0.4405</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.02731</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>08</dateMonth>
+<dateDay>07</dateDay>
+<MJD>60163</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2554</X>
+<Y>0.4389</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.02751</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>08</dateMonth>
+<dateDay>08</dateDay>
+<MJD>60164</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2567</X>
+<Y>0.4373</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.02793</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>08</dateMonth>
+<dateDay>09</dateDay>
+<MJD>60165</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2581</X>
+<Y>0.4356</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.02857</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>08</dateMonth>
+<dateDay>10</dateDay>
+<MJD>60166</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2593</X>
+<Y>0.4340</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.02945</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>08</dateMonth>
+<dateDay>11</dateDay>
+<MJD>60167</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2606</X>
+<Y>0.4323</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.03048</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>08</dateMonth>
+<dateDay>12</dateDay>
+<MJD>60168</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2618</X>
+<Y>0.4306</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.03161</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>08</dateMonth>
+<dateDay>13</dateDay>
+<MJD>60169</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2630</X>
+<Y>0.4289</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.03270</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>08</dateMonth>
+<dateDay>14</dateDay>
+<MJD>60170</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2642</X>
+<Y>0.4272</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.03375</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>08</dateMonth>
+<dateDay>15</dateDay>
+<MJD>60171</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2653</X>
+<Y>0.4254</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.03473</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>08</dateMonth>
+<dateDay>16</dateDay>
+<MJD>60172</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2664</X>
+<Y>0.4236</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.03563</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>08</dateMonth>
+<dateDay>17</dateDay>
+<MJD>60173</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2675</X>
+<Y>0.4219</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.03642</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>08</dateMonth>
+<dateDay>18</dateDay>
+<MJD>60174</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2685</X>
+<Y>0.4201</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.03704</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>08</dateMonth>
+<dateDay>19</dateDay>
+<MJD>60175</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2695</X>
+<Y>0.4183</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.03753</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>08</dateMonth>
+<dateDay>20</dateDay>
+<MJD>60176</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2705</X>
+<Y>0.4164</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.03789</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>08</dateMonth>
+<dateDay>21</dateDay>
+<MJD>60177</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2714</X>
+<Y>0.4146</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.03828</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>08</dateMonth>
+<dateDay>22</dateDay>
+<MJD>60178</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2723</X>
+<Y>0.4127</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.03874</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>08</dateMonth>
+<dateDay>23</dateDay>
+<MJD>60179</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2732</X>
+<Y>0.4109</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.03933</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>08</dateMonth>
+<dateDay>24</dateDay>
+<MJD>60180</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2740</X>
+<Y>0.4090</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.04006</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>08</dateMonth>
+<dateDay>25</dateDay>
+<MJD>60181</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2748</X>
+<Y>0.4071</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.04094</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>08</dateMonth>
+<dateDay>26</dateDay>
+<MJD>60182</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2756</X>
+<Y>0.4052</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.04200</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>08</dateMonth>
+<dateDay>27</dateDay>
+<MJD>60183</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2763</X>
+<Y>0.4033</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.04313</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>08</dateMonth>
+<dateDay>28</dateDay>
+<MJD>60184</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2770</X>
+<Y>0.4014</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.04421</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>08</dateMonth>
+<dateDay>29</dateDay>
+<MJD>60185</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2776</X>
+<Y>0.3995</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.04523</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>08</dateMonth>
+<dateDay>30</dateDay>
+<MJD>60186</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2783</X>
+<Y>0.3975</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.04607</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>08</dateMonth>
+<dateDay>31</dateDay>
+<MJD>60187</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2788</X>
+<Y>0.3956</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.04663</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>09</dateMonth>
+<dateDay>01</dateDay>
+<MJD>60188</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2794</X>
+<Y>0.3936</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.04698</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>09</dateMonth>
+<dateDay>02</dateDay>
+<MJD>60189</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2799</X>
+<Y>0.3917</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.04721</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>09</dateMonth>
+<dateDay>03</dateDay>
+<MJD>60190</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2804</X>
+<Y>0.3897</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.04751</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>09</dateMonth>
+<dateDay>04</dateDay>
+<MJD>60191</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2809</X>
+<Y>0.3878</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.04799</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>09</dateMonth>
+<dateDay>05</dateDay>
+<MJD>60192</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2813</X>
+<Y>0.3858</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.04874</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>09</dateMonth>
+<dateDay>06</dateDay>
+<MJD>60193</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2816</X>
+<Y>0.3838</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.04976</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>09</dateMonth>
+<dateDay>07</dateDay>
+<MJD>60194</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2820</X>
+<Y>0.3818</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.05094</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>09</dateMonth>
+<dateDay>08</dateDay>
+<MJD>60195</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2823</X>
+<Y>0.3798</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.05219</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>09</dateMonth>
+<dateDay>09</dateDay>
+<MJD>60196</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2826</X>
+<Y>0.3779</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.05346</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>09</dateMonth>
+<dateDay>10</dateDay>
+<MJD>60197</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2828</X>
+<Y>0.3759</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.05468</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>09</dateMonth>
+<dateDay>11</dateDay>
+<MJD>60198</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2830</X>
+<Y>0.3739</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.05573</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>09</dateMonth>
+<dateDay>12</dateDay>
+<MJD>60199</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2832</X>
+<Y>0.3719</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.05665</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>09</dateMonth>
+<dateDay>13</dateDay>
+<MJD>60200</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2833</X>
+<Y>0.3699</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.05744</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>09</dateMonth>
+<dateDay>14</dateDay>
+<MJD>60201</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2834</X>
+<Y>0.3679</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.05812</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>09</dateMonth>
+<dateDay>15</dateDay>
+<MJD>60202</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2835</X>
+<Y>0.3659</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.05868</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>09</dateMonth>
+<dateDay>16</dateDay>
+<MJD>60203</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2835</X>
+<Y>0.3639</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.05917</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>09</dateMonth>
+<dateDay>17</dateDay>
+<MJD>60204</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2835</X>
+<Y>0.3619</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.05959</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>09</dateMonth>
+<dateDay>18</dateDay>
+<MJD>60205</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2834</X>
+<Y>0.3599</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.06010</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>09</dateMonth>
+<dateDay>19</dateDay>
+<MJD>60206</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2834</X>
+<Y>0.3579</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.06065</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>09</dateMonth>
+<dateDay>20</dateDay>
+<MJD>60207</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2832</X>
+<Y>0.3560</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.06132</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>09</dateMonth>
+<dateDay>21</dateDay>
+<MJD>60208</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2831</X>
+<Y>0.3540</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.06212</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>09</dateMonth>
+<dateDay>22</dateDay>
+<MJD>60209</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2829</X>
+<Y>0.3520</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.06308</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>09</dateMonth>
+<dateDay>23</dateDay>
+<MJD>60210</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2827</X>
+<Y>0.3500</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.06418</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>09</dateMonth>
+<dateDay>24</dateDay>
+<MJD>60211</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2824</X>
+<Y>0.3481</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.06531</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>09</dateMonth>
+<dateDay>25</dateDay>
+<MJD>60212</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2821</X>
+<Y>0.3461</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.06631</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>09</dateMonth>
+<dateDay>26</dateDay>
+<MJD>60213</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2818</X>
+<Y>0.3442</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.06699</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>09</dateMonth>
+<dateDay>27</dateDay>
+<MJD>60214</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2815</X>
+<Y>0.3422</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.06736</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>09</dateMonth>
+<dateDay>28</dateDay>
+<MJD>60215</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2811</X>
+<Y>0.3403</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.06742</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>09</dateMonth>
+<dateDay>29</dateDay>
+<MJD>60216</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2806</X>
+<Y>0.3384</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.06730</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>09</dateMonth>
+<dateDay>30</dateDay>
+<MJD>60217</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2802</X>
+<Y>0.3364</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.06714</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>10</dateMonth>
+<dateDay>01</dateDay>
+<MJD>60218</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2797</X>
+<Y>0.3345</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.06714</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>10</dateMonth>
+<dateDay>02</dateDay>
+<MJD>60219</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2792</X>
+<Y>0.3326</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.06735</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>10</dateMonth>
+<dateDay>03</dateDay>
+<MJD>60220</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2786</X>
+<Y>0.3307</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.06777</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>10</dateMonth>
+<dateDay>04</dateDay>
+<MJD>60221</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2780</X>
+<Y>0.3289</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.06847</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>10</dateMonth>
+<dateDay>05</dateDay>
+<MJD>60222</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2774</X>
+<Y>0.3270</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.06937</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>10</dateMonth>
+<dateDay>06</dateDay>
+<MJD>60223</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2768</X>
+<Y>0.3251</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.07037</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>10</dateMonth>
+<dateDay>07</dateDay>
+<MJD>60224</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2761</X>
+<Y>0.3233</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.07138</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>10</dateMonth>
+<dateDay>08</dateDay>
+<MJD>60225</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2754</X>
+<Y>0.3215</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.07231</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>10</dateMonth>
+<dateDay>09</dateDay>
+<MJD>60226</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2746</X>
+<Y>0.3196</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.07315</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>10</dateMonth>
+<dateDay>10</dateDay>
+<MJD>60227</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2738</X>
+<Y>0.3178</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.07381</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>10</dateMonth>
+<dateDay>11</dateDay>
+<MJD>60228</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2730</X>
+<Y>0.3161</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.07426</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>10</dateMonth>
+<dateDay>12</dateDay>
+<MJD>60229</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2722</X>
+<Y>0.3143</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.07462</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>10</dateMonth>
+<dateDay>13</dateDay>
+<MJD>60230</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2713</X>
+<Y>0.3125</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.07491</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>10</dateMonth>
+<dateDay>14</dateDay>
+<MJD>60231</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2704</X>
+<Y>0.3108</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.07507</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>10</dateMonth>
+<dateDay>15</dateDay>
+<MJD>60232</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2695</X>
+<Y>0.3090</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.07522</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>10</dateMonth>
+<dateDay>16</dateDay>
+<MJD>60233</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2685</X>
+<Y>0.3073</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.07546</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>10</dateMonth>
+<dateDay>17</dateDay>
+<MJD>60234</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2675</X>
+<Y>0.3056</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.07581</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>10</dateMonth>
+<dateDay>18</dateDay>
+<MJD>60235</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2665</X>
+<Y>0.3040</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.07632</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>10</dateMonth>
+<dateDay>19</dateDay>
+<MJD>60236</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2655</X>
+<Y>0.3023</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.07697</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>10</dateMonth>
+<dateDay>20</dateDay>
+<MJD>60237</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2644</X>
+<Y>0.3007</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.07776</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>10</dateMonth>
+<dateDay>21</dateDay>
+<MJD>60238</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2633</X>
+<Y>0.2991</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.07859</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>10</dateMonth>
+<dateDay>22</dateDay>
+<MJD>60239</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2622</X>
+<Y>0.2974</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.07936</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>10</dateMonth>
+<dateDay>23</dateDay>
+<MJD>60240</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2610</X>
+<Y>0.2959</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.07988</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>10</dateMonth>
+<dateDay>24</dateDay>
+<MJD>60241</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2598</X>
+<Y>0.2943</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.08008</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>10</dateMonth>
+<dateDay>25</dateDay>
+<MJD>60242</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2586</X>
+<Y>0.2928</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.07991</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>10</dateMonth>
+<dateDay>26</dateDay>
+<MJD>60243</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2574</X>
+<Y>0.2912</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.07950</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>10</dateMonth>
+<dateDay>27</dateDay>
+<MJD>60244</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2561</X>
+<Y>0.2897</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.07892</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>10</dateMonth>
+<dateDay>28</dateDay>
+<MJD>60245</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2549</X>
+<Y>0.2883</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.07837</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>10</dateMonth>
+<dateDay>29</dateDay>
+<MJD>60246</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2536</X>
+<Y>0.2868</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.07800</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>10</dateMonth>
+<dateDay>30</dateDay>
+<MJD>60247</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2522</X>
+<Y>0.2854</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.07796</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>10</dateMonth>
+<dateDay>31</dateDay>
+<MJD>60248</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2509</X>
+<Y>0.2840</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.07818</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>11</dateMonth>
+<dateDay>01</dateDay>
+<MJD>60249</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2495</X>
+<Y>0.2826</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.07861</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>11</dateMonth>
+<dateDay>02</dateDay>
+<MJD>60250</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2481</X>
+<Y>0.2812</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.07921</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>11</dateMonth>
+<dateDay>03</dateDay>
+<MJD>60251</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2467</X>
+<Y>0.2799</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.07987</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>11</dateMonth>
+<dateDay>04</dateDay>
+<MJD>60252</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2452</X>
+<Y>0.2786</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.08047</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>11</dateMonth>
+<dateDay>05</dateDay>
+<MJD>60253</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2438</X>
+<Y>0.2773</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.08095</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>11</dateMonth>
+<dateDay>06</dateDay>
+<MJD>60254</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2423</X>
+<Y>0.2760</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.08128</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>11</dateMonth>
+<dateDay>07</dateDay>
+<MJD>60255</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2408</X>
+<Y>0.2748</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.08147</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>11</dateMonth>
+<dateDay>08</dateDay>
+<MJD>60256</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2393</X>
+<Y>0.2736</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.08149</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>11</dateMonth>
+<dateDay>09</dateDay>
+<MJD>60257</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2377</X>
+<Y>0.2724</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.08138</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>11</dateMonth>
+<dateDay>10</dateDay>
+<MJD>60258</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2362</X>
+<Y>0.2712</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.08120</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>11</dateMonth>
+<dateDay>11</dateDay>
+<MJD>60259</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2346</X>
+<Y>0.2701</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.08100</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>11</dateMonth>
+<dateDay>12</dateDay>
+<MJD>60260</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2330</X>
+<Y>0.2690</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.08088</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>11</dateMonth>
+<dateDay>13</dateDay>
+<MJD>60261</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2314</X>
+<Y>0.2679</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.08088</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>11</dateMonth>
+<dateDay>14</dateDay>
+<MJD>60262</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2297</X>
+<Y>0.2668</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.08110</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>11</dateMonth>
+<dateDay>15</dateDay>
+<MJD>60263</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2281</X>
+<Y>0.2658</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.08156</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>11</dateMonth>
+<dateDay>16</dateDay>
+<MJD>60264</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2264</X>
+<Y>0.2648</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.08223</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>11</dateMonth>
+<dateDay>17</dateDay>
+<MJD>60265</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2247</X>
+<Y>0.2639</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.08305</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>11</dateMonth>
+<dateDay>18</dateDay>
+<MJD>60266</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2230</X>
+<Y>0.2629</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.08376</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>11</dateMonth>
+<dateDay>19</dateDay>
+<MJD>60267</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2213</X>
+<Y>0.2620</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.08425</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>11</dateMonth>
+<dateDay>20</dateDay>
+<MJD>60268</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2196</X>
+<Y>0.2611</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.08447</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>11</dateMonth>
+<dateDay>21</dateDay>
+<MJD>60269</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2179</X>
+<Y>0.2603</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.08436</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>11</dateMonth>
+<dateDay>22</dateDay>
+<MJD>60270</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2161</X>
+<Y>0.2594</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.08402</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>11</dateMonth>
+<dateDay>23</dateDay>
+<MJD>60271</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2144</X>
+<Y>0.2586</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.08356</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>11</dateMonth>
+<dateDay>24</dateDay>
+<MJD>60272</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2126</X>
+<Y>0.2579</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.08306</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>11</dateMonth>
+<dateDay>25</dateDay>
+<MJD>60273</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2108</X>
+<Y>0.2571</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.08270</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>11</dateMonth>
+<dateDay>26</dateDay>
+<MJD>60274</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2090</X>
+<Y>0.2564</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.08259</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>11</dateMonth>
+<dateDay>27</dateDay>
+<MJD>60275</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2072</X>
+<Y>0.2557</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.08277</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>11</dateMonth>
+<dateDay>28</dateDay>
+<MJD>60276</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2054</X>
+<Y>0.2551</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.08319</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>11</dateMonth>
+<dateDay>29</dateDay>
+<MJD>60277</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2036</X>
+<Y>0.2545</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.08374</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>11</dateMonth>
+<dateDay>30</dateDay>
+<MJD>60278</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.2018</X>
+<Y>0.2539</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.08434</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>12</dateMonth>
+<dateDay>01</dateDay>
+<MJD>60279</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.1999</X>
+<Y>0.2533</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.08493</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>12</dateMonth>
+<dateDay>02</dateDay>
+<MJD>60280</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.1981</X>
+<Y>0.2528</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.08544</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>12</dateMonth>
+<dateDay>03</dateDay>
+<MJD>60281</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.1962</X>
+<Y>0.2523</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.08585</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>12</dateMonth>
+<dateDay>04</dateDay>
+<MJD>60282</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.1944</X>
+<Y>0.2518</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.08614</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>12</dateMonth>
+<dateDay>05</dateDay>
+<MJD>60283</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.1925</X>
+<Y>0.2514</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.08624</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>12</dateMonth>
+<dateDay>06</dateDay>
+<MJD>60284</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.1907</X>
+<Y>0.2510</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.08618</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>12</dateMonth>
+<dateDay>07</dateDay>
+<MJD>60285</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.1888</X>
+<Y>0.2506</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.08601</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>12</dateMonth>
+<dateDay>08</dateDay>
+<MJD>60286</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.1869</X>
+<Y>0.2503</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.08576</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>12</dateMonth>
+<dateDay>09</dateDay>
+<MJD>60287</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.1850</X>
+<Y>0.2500</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.08551</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>12</dateMonth>
+<dateDay>10</dateDay>
+<MJD>60288</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.1832</X>
+<Y>0.2497</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.08540</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>12</dateMonth>
+<dateDay>11</dateDay>
+<MJD>60289</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.1813</X>
+<Y>0.2494</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.08545</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>12</dateMonth>
+<dateDay>12</dateDay>
+<MJD>60290</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.1794</X>
+<Y>0.2492</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.08570</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>12</dateMonth>
+<dateDay>13</dateDay>
+<MJD>60291</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.1775</X>
+<Y>0.2490</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.08605</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>12</dateMonth>
+<dateDay>14</dateDay>
+<MJD>60292</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.1756</X>
+<Y>0.2489</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.08651</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>12</dateMonth>
+<dateDay>15</dateDay>
+<MJD>60293</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.1737</X>
+<Y>0.2488</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.08697</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>12</dateMonth>
+<dateDay>16</dateDay>
+<MJD>60294</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.1719</X>
+<Y>0.2487</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.08724</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>12</dateMonth>
+<dateDay>17</dateDay>
+<MJD>60295</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.1700</X>
+<Y>0.2486</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.08724</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>12</dateMonth>
+<dateDay>18</dateDay>
+<MJD>60296</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.1681</X>
+<Y>0.2486</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.08700</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>12</dateMonth>
+<dateDay>19</dateDay>
+<MJD>60297</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.1662</X>
+<Y>0.2486</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.08647</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>12</dateMonth>
+<dateDay>20</dateDay>
+<MJD>60298</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.1643</X>
+<Y>0.2486</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.08579</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>12</dateMonth>
+<dateDay>21</dateDay>
+<MJD>60299</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.1625</X>
+<Y>0.2487</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.08509</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+<timeSeries>
+<time>
+<dateYear>2023</dateYear>
+<dateMonth>12</dateMonth>
+<dateDay>22</dateDay>
+<MJD>60300</MJD>
+</time>
+<dataEOP>
+<pole type="prediction">
+<X>0.1606</X>
+<Y>0.2487</Y>
+</pole>
+<UT type="prediction">
+<UT1-UTC>0.08452</UT1-UTC>
+</UT>
+</dataEOP>
+</timeSeries>
+</data>
+</EOP>
