@@ -151,11 +151,11 @@ class BULLETIN(object):
         self.folders = {"a": self.bulletin_a_folder,
                         "b": self.bulletin_b_folder,
                         "c": self.bulletin_c_folder,
-                        "d": self.bulletin_d_folder}
+                        "D": self.bulletin_d_folder}
         self.eop_link = {'a': 'https://datacenter.iers.org/availableVersions.php?id=6',
                          'b': 'https://datacenter.iers.org/availableVersions.php?id=207',
                          'c': 'https://datacenter.iers.org/availableVersions.php?id=16',
-                         'd': 'https://datacenter.iers.org/availableVersions.php?id=17',
+                         'D': 'https://datacenter.iers.org/availableVersions.php?id=17',
                          }
         self.xpath_tags = {
             'eop_date': '//*[@id="content"]/table/tbody/tr[2]/td[2]/span',
@@ -210,6 +210,7 @@ if __name__ == '__main__':
     parser.add_argument('-a', '--bulletin-a', action="store_true", required=False)
     parser.add_argument('-b', '--bulletin-b', action="store_true", required=False)
     parser.add_argument('-c', '--bulletin-c', action="store_true", required=False)
+    parser.add_argument('-D', '--bulletin-D', action="store_true", required=False)
     args = parser.parse_args()
     if args.d is None:
         day_to_look = 1
@@ -260,3 +261,5 @@ if __name__ == '__main__':
         bul.get_data('b')
     if args.bulletin_c:
         bul.get_data('c')
+    if args.bulletin_D:
+        bul.get_data('D')
