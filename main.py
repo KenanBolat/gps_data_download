@@ -147,17 +147,23 @@ class BULLETIN(object):
         self.bulletin_a_folder = 'bulletin_a/'
         self.bulletin_b_folder = 'bulletin_b/'
         self.bulletin_c_folder = 'bulletin_c/'
-        self.folders = [self.bulletin_a_folder,
-                        self.bulletin_b_folder,
-                        self.bulletin_c_folder]
-        self.eop_link = ["https://datacenter.iers.org/availableVersions.php?id=6"]
+        self.bulletin_d_folder = 'bulletin_d/'
+        self.folders = {"a": self.bulletin_a_folder,
+                        "b": self.bulletin_b_folder,
+                        "c": self.bulletin_c_folder,
+                        "d": self.bulletin_d_folder}
+        self.eop_link = {'a': 'https://datacenter.iers.org/availableVersions.php?id=6',
+                         'b': 'https://datacenter.iers.org/availableVersions.php?id=207',
+                         'c': 'https://datacenter.iers.org/availableVersions.php?id=16',
+                         'd': 'https://datacenter.iers.org/availableVersions.php?id=17',
+                         }
         self.xpath_tags = {
             'eop_date': '//*[@id="content"]/table/tbody/tr[2]/td[2]/span',
             'eop_link': '/html/body/div[1]/div/table/tbody/tr[2]/td[5]/a/@href',
         }
 
     def check_folders(self):
-        for folder in self.folders:
+        for folder in self.folders.values():
             if not os.path.exists(f'./{folder}'):
                 os.mkdir(f'./{folder}')
 
@@ -171,9 +177,9 @@ class BULLETIN(object):
     def get_match(tree, tag):
         return tree.xpath(tag)
 
-    def get_data(self):
+    def get_data(self, bulletin_code):
         self.check_folders()
-        tree = self.get_response(self.eop_link[0])
+        tree = self.get_response(self.eop_link[bulletin_code])
         element_date = self.get_match(tree, tag=self.xpath_tags['eop_date'])
         element_link = self.get_match(tree, tag=self.xpath_tags['eop_link'])
         print('date::', element_date[0].text, "::link::", element_link[0])
@@ -187,7 +193,7 @@ class BULLETIN(object):
             xml_content = response.content
 
             # Save the XML file to a local file
-            with open(os.path.join('./', self.bulletin_a_folder) + element_link[0].split('/')[-1], "wb") as f:
+            with open(os.path.join('./', self.folders[bulletin_code]) + element_link[0].split('/')[-1], "wb") as f:
                 f.write(xml_content)
 
         else:
@@ -247,6 +253,10 @@ if __name__ == '__main__':
             print(file_[0], "...Not Available")
     log_file = os.path.join(igu_data.log_folder, 'log_' + datetime.datetime.today().strftime("%Y%m%d") + '.log')
     res.to_csv(log_file, mode='a', header=not os.path.exists(log_file))
+    bul = BULLETIN()
     if args.bulletin_a:
-        bul = BULLETIN()
-        bul.get_data()
+        bul.get_data('a')
+    if args.bulletin_b:
+        bul.get_data('b')
+    if args.bulletin_c:
+        bul.get_data('c')
