@@ -4,3 +4,4 @@ tabulate
 pandas
 gnsscal
 argparse
+lxml
