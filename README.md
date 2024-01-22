@@ -10,20 +10,31 @@ Default options are set in the config file.
 To Download data from the datasource required credentials are needed. 
 Change the config file to your needs.
 
-> Default: Default the script will search one day before 
+>Activate virtual environment for the python 
 
-```python main.py``` 
+<hr>
 
-> Options: two days before
+```python3 -m venv venv```
+```source venv/bin/activate```
+```pip install --upgrade pip```
+```pip install -r requirements.txt```
 
-```python main.py -d 2```
+<hr>
 
-> Options: to download the bulletin a 
+> ###Default:The script will search one day before 
 
-```python main.py -a ```
+``` python main.py``` 
 
-> Options: to download the bulletin a 
+> ###Options: two days before
 
-```python main.py -a -d 2```
+``` python main.py -d 2```
+
+> ###Options: to download the bulletin a 
+
+``` python main.py -a ```
+
+> ###Options: to download the bulletin a and download the data belonging two days before
+
+``` python main.py -a -d 2```
 
 
