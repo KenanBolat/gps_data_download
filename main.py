@@ -58,6 +58,7 @@ class IGU(object):
         self.site = ['https://cddis.nasa.gov/archive/gnss/products']
         self.days_count = days
         self.log_folder = 'log'
+        self.ionex_folder = 'ionex_files'
         self.gps_info = GpsTime(self.days_count).form_info()
         self.user_name = EARTH_DATA_USERNAME
         self.password = EARTH_DATA_PASSWORD
@@ -69,9 +70,11 @@ class IGU(object):
                      "Year": self.gps_info.year,
                      "Day of The Year": self.gps_info.total_days,
                      "GPS Week": self.gps_info.no_weeks}
+
         self.folders = [self.igu_folder,
                         self.log_folder,
-                        self.temp]
+                        self.temp,
+                        self.ionex_folder]
 
     def check_connection(self):
         url = self.site[0]
@@ -87,21 +90,33 @@ class IGU(object):
             if not os.path.exists(f'./{folder}'):
                 os.mkdir(f'./{folder}')
 
-    def get_file(self, filename):
+    def get_file(self, url, filename):
+        file_ = f'{url}/{filename}'
+        with requests.Session() as session:
+            session.auth = (self.user_name, self.password)
+            r1 = session.request('get', file_)
+            r = session.get(r1.url, auth=(self.user_name, self.password))
+            if r.ok:
+                with open(filename, 'wb') as file:
+                    file.write(r.content)
+                    return True
+            else:
+                return False
 
-        if self.check_connection():
+    def empty_folder(self, folder, age=0):
 
-            url = f'{self.site[0]}/{self.gps_info.no_weeks}/{filename}'
-            with requests.Session() as session:
-                session.auth = (self.user_name, self.password)
-                r1 = session.request('get', url)
-                r = session.get(r1.url, auth=(self.user_name, self.password))
-                if r.ok:
-                    with open(filename, 'wb') as file:
-                        file.write(r.content)
-                        return True
-                else:
-                    return False
+        threshold = datetime.datetime.now() - datetime.timedelta(days=age)
+        for file in os.listdir(folder):
+            file_path = os.path.join(folder, file)
+            try:
+
+                if datetime.datetime.fromtimestamp(os.stat(file_path).st_mtime) <= threshold:
+                    if os.path.isfile(file_path):
+                        os.unlink(file_path)
+
+            except Exception as e:
+
+                print(e)
 
     def get_metadata_info(self, filename):
 
@@ -117,27 +132,34 @@ class IGU(object):
                               "date_end": df.Date.max(),
                               }
 
-    def rename_file(self, filename):
-        new_name = "igu" + self.meta_data['name_string'] + ".sp3"
+    def rename_file(self, filename, type='igu'):
+        if type == 'igu':
+            new_name = f"igu{self.meta_data['name_string']}.sp3"
+        elif type == 'ionex':
+            new_name = f"igrg{self.gps_info.total_days}0.{str(self.gps_info.year)[2:]}i"
         os.rename(filename, new_name)
         # shutil.move(filename, self.temp)
         return new_name
 
-    def compress_new_data(self, filename):
+    def compress_new_data(self, filename, type='igu'):
+        if type == 'igu':
+            fname = os.path.join(self.igu_folder, filename + ".Z")
+        elif type == 'ionex':
+            fname = os.path.join(self.ionex_folder, filename + ".Z")
 
         with open(filename, 'rb') as infile, \
-                gzip.open(os.path.join(self.igu_folder, filename + ".Z"), "wb") as gzip_file:
+                gzip.open(fname, "wb") as gzip_file:
             gzip_file.writelines(infile)
 
         shutil.move(os.path.join('./', filename), os.path.join(self.temp, filename))
 
     def uncompress(self, filename):
-        sp3_name = filename.split('.gz')[0].lower()
+        uncompressed = filename.split('.gz')[0].lower()
         with gzip.open(filename, 'rb') as f_in:
-            with open(sp3_name, 'wb') as f_out:
+            with open(uncompressed, 'wb') as f_out:
                 shutil.copyfileobj(f_in, f_out)
         shutil.move(os.path.join('./', filename), os.path.join(self.temp, filename))
-        return sp3_name
+        return uncompressed
 
 
 if __name__ == '__main__':
@@ -153,7 +175,15 @@ if __name__ == '__main__':
         day_to_look = args.d
 
     igu_data = IGU(day_to_look)
+
+    assert igu_data.check_connection(), "There is no connection!!! Check remote site address!!!"
+
     igu_data.check_folders()
+
+    igu_data.empty_folder(igu_data.temp)
+    igu_data.empty_folder(igu_data.igu_folder, age=7)
+    igu_data.empty_folder(igu_data.ionex_folder, age=7)
+
     res = pd.DataFrame(columns=['file_name',
                                 'name_string',
                                 'date_start',
@@ -165,9 +195,22 @@ if __name__ == '__main__':
 
     print(igu_data.data)
 
-    for file_ in igu_data.gps_info.date_string_array:
+    ionex_data_url = ionex_data_url = f"{igu_data.site[0]}/ionex/{igu_data.gps_info.year}/{igu_data.gps_info.total_days}"
+    ionex_data_file = f"IGS0OPSRAP_{igu_data.gps_info.year}{igu_data.gps_info.total_days}0000_01D_02H_GIM.INX.gz"
 
-        if igu_data.get_file(file_[0]):
+    if igu_data.get_file(ionex_data_url, ionex_data_file):
+        uncompressed = igu_data.uncompress(ionex_data_file)
+        renamed = igu_data.rename_file(uncompressed, type='ionex')
+        igu_data.compress_new_data(renamed, type='ionex')
+
+        print(ionex_data_file, "...Done")
+    else:
+        print(ionex_data_file, "...Not Available")
+
+    for file_ in igu_data.gps_info.date_string_array:
+        url = f'{igu_data.site[0]}/{igu_data.gps_info.no_weeks}'
+
+        if igu_data.get_file(url, file_[0]):
             print(file_[0], "...Done")
             uncompressed_file = igu_data.uncompress(file_[0])
             igu_data.get_metadata_info(uncompressed_file)
@@ -182,7 +225,8 @@ if __name__ == '__main__':
                 igu_data.meta_data['date_to_download'] = igu_data.gps_info.timedelta_buffer.date()
                 igu_data.meta_data['day_of_year'] = igu_data.gps_info.total_days
                 igu_data.meta_data['downloaded_at'] = datetime.datetime.now()
-                res = res.append(igu_data.meta_data, ignore_index=True)
+                # res = res.append(igu_data.meta_data, ignore_index=True)
+                res = pd.concat([res, pd.DataFrame([igu_data.meta_data])], ignore_index=True)
             else:
                 print('Date is not relevant !! check dates !! ')
         else:
