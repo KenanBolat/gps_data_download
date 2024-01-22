@@ -22,4 +22,8 @@ Change the config file to your needs.
 
 ```python main.py -a ```
 
+> Options: to download the bulletin a 
+
+```python main.py -a -d 2```
+
 
