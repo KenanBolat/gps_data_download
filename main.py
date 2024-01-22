@@ -104,6 +104,7 @@ class CDDIS(object):
             else:
                 return False
 
+    @staticmethod
     def empty_folder(self, folder, age=0):
 
         threshold = datetime.datetime.now() - datetime.timedelta(days=age)
