@@ -15,26 +15,28 @@ Change the config file to your needs.
 <hr>
 
 ```python3 -m venv venv```
+
 ```source venv/bin/activate```
+
 ```pip install --upgrade pip```
+
 ```pip install -r requirements.txt```
+
 
 <hr>
 
-> ###Default:The script will search one day before 
+> ### Default:The script will search one day before 
 
 ``` python main.py``` 
 
-> ###Options: two days before
+> ### Options: two days before
 
 ``` python main.py -d 2```
 
-> ###Options: to download the bulletin a 
+> ### Options: to download the bulletin a 
 
 ``` python main.py -a ```
 
-> ###Options: to download the bulletin a and download the data belonging two days before
+> ### Options: to download the bulletin a and download the data belonging two days before
 
 ``` python main.py -a -d 2```
-
-
