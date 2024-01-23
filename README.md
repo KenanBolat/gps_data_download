@@ -13,6 +13,7 @@ Change the config file to your needs.
 >Activate virtual environment for the python 
 
 <details>
+<summary>How to Install</summary>
 <hr>
 
 ```python3 -m venv venv```
