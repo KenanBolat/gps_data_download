@@ -12,6 +12,7 @@ Change the config file to your needs.
 
 >Activate virtual environment for the python 
 
+<details>
 <hr>
 
 ```python3 -m venv venv```
@@ -24,6 +25,7 @@ Change the config file to your needs.
 
 
 <hr>
+</details>
 
 > ### Default:The script will search one day before 
 
