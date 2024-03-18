@@ -18,7 +18,7 @@ load_dotenv()
 EARTH_DATA_USERNAME = os.getenv('EARTH_DATA_USERNAME')
 EARTH_DATA_PASSWORD = os.getenv('EARTH_DATA_PASSWORD')
 FILE_AGE = 4
-IONOSPHERE_RETRO_DATA = 10
+IONOSPHERE_RETRO_DATA = 5
 
 
 class GpsTime(object):
@@ -170,16 +170,15 @@ class CDDIS(object):
     def compress_new_data(self, filename, type='igu'):
         date_string = self.meta_data['date_start'].strftime("%Y%m%d")
 
-        if not os.path.exists(f'./{self.igu_folder}/{date_string}'):
-            os.mkdir(f'./{self.igu_folder}/{date_string}')
-
-        if not os.path.exists(f'./{self.ionex_folder}/{date_string}'):
-            os.mkdir(f'./{self.ionex_folder}/{date_string}')
-
         if type == 'igu':
+            if not os.path.exists(f'./{self.igu_folder}/{date_string}'):
+                os.mkdir(f'./{self.igu_folder}/{date_string}')
+
             fname = os.path.join(f'./{self.igu_folder}/{date_string}', filename + ".Z")
 
         elif type == 'ionex':
+            if not os.path.exists(f'./{self.ionex_folder}/{date_string}'):
+                os.mkdir(f'./{self.ionex_folder}/{date_string}')
             fname = os.path.join(f'./{self.ionex_folder}/{date_string}', filename + ".Z")
 
         with open(filename, 'rb') as infile, \
@@ -315,7 +314,7 @@ if __name__ == '__main__':
     # 2 days before
     # 3 days before
     parser = argparse.ArgumentParser()
-    parser.add_argument('-d', type=int, required=False)
+    parser.add_argument('-d', required=False)
 
     parser.add_argument('-a', '--bulletin-a', action="store_true", required=False)
     parser.add_argument('-b', '--bulletin-b', action="store_true", required=False)
@@ -327,57 +326,62 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     if args.d is None:
-        day_to_look = 1
+        start = 1
+        end = 1
     else:
-        day_to_look = args.d
+        if ':' in str(args.d):
+            start, end = map(int, args.d.split(':'))
+        else:  # if only one value is given
+            start, end = args.d, args.d  # end is not included
 
-    igs_data = CDDIS(day_to_look)
+    for day_to_look in range(start, end + 1):
+        igs_data = CDDIS(day_to_look)
 
-    assert igs_data.check_connection(), "There is no connection!!! Check remote site address!!!"
+        assert igs_data.check_connection(), "There is no connection!!! Check remote site address!!!"
 
-    igs_data.check_folders()
+        igs_data.check_folders()
 
-    igs_data.empty_folder(igs_data.temp, age=0)
-    igs_data.empty_folder(igs_data.igu_folder)
-    igs_data.empty_folder(igs_data.ionex_folder)
+        igs_data.empty_folder(igs_data.temp, age=0)
+        igs_data.empty_folder(igs_data.igu_folder)
+        igs_data.empty_folder(igs_data.ionex_folder)
 
-    res = pd.DataFrame(columns=['file_name',
-                                'name_string',
-                                'date_start',
-                                'date_end',
-                                'new_file_name',
-                                'date_to_download',
-                                'day_of_year',
-                                'downloaded_at'])
+        res = pd.DataFrame(columns=['file_name',
+                                    'name_string',
+                                    'date_start',
+                                    'date_end',
+                                    'new_file_name',
+                                    'date_to_download',
+                                    'day_of_year',
+                                    'downloaded_at'])
 
-    print(igs_data.data)
+        print(igs_data.data)
 
-    for file_ in igs_data.gps_info.date_string_array:
-        url = f'{igs_data.site[0]}/{igs_data.gps_info.no_weeks}'
+        for file_ in igs_data.gps_info.date_string_array:
+            url = f'{igs_data.site[0]}/{igs_data.gps_info.no_weeks}'
 
-        if igs_data.get_file(url, file_[0]):
-            print(file_[0], "...Done")
-            uncompressed_file = igs_data.uncompress(file_[0])
-            igs_data.get_metadata_info(uncompressed_file)
-            # res
-            print(igs_data.meta_data)
-            if igs_data.meta_data['date_start'].date() <= \
-                    igs_data.gps_info.timedelta_buffer.date() <= \
-                    igs_data.meta_data['date_end'].date():
-                new_file_name = igs_data.rename_file(uncompressed_file)
-                igs_data.compress_new_data(new_file_name)
-                igs_data.meta_data['new_file_name'] = new_file_name
-                igs_data.meta_data['date_to_download'] = igs_data.gps_info.timedelta_buffer.date()
-                igs_data.meta_data['day_of_year'] = igs_data.gps_info.total_days
-                igs_data.meta_data['downloaded_at'] = datetime.datetime.now()
-                # res = res.append(igu_data.meta_data, ignore_index=True)
-                res = pd.concat([res, pd.DataFrame([igs_data.meta_data])], ignore_index=True)
+            if igs_data.get_file(url, file_[0]):
+                print(file_[0], "...Done")
+                uncompressed_file = igs_data.uncompress(file_[0])
+                igs_data.get_metadata_info(uncompressed_file)
+                # res
+                print(igs_data.meta_data)
+                if igs_data.meta_data['date_start'].date() <= \
+                        igs_data.gps_info.timedelta_buffer.date() <= \
+                        igs_data.meta_data['date_end'].date():
+                    new_file_name = igs_data.rename_file(uncompressed_file)
+                    igs_data.compress_new_data(new_file_name)
+                    igs_data.meta_data['new_file_name'] = new_file_name
+                    igs_data.meta_data['date_to_download'] = igs_data.gps_info.timedelta_buffer.date()
+                    igs_data.meta_data['day_of_year'] = igs_data.gps_info.total_days
+                    igs_data.meta_data['downloaded_at'] = datetime.datetime.now()
+                    # res = res.append(igu_data.meta_data, ignore_index=True)
+                    res = pd.concat([res, pd.DataFrame([igs_data.meta_data])], ignore_index=True)
+                else:
+                    print('Date is not relevant !! check dates !! ')
             else:
-                print('Date is not relevant !! check dates !! ')
-        else:
-            print(file_[0], "...Not Available")
-    log_file = os.path.join(igs_data.log_folder, 'log_' + datetime.datetime.today().strftime("%Y%m%d") + '.log')
-    res.to_csv(log_file, mode='a', header=not os.path.exists(log_file))
+                print(file_[0], "...Not Available")
+        log_file = os.path.join(igs_data.log_folder, 'log_' + datetime.datetime.today().strftime("%Y%m%d") + '.log')
+        res.to_csv(log_file, mode='a', header=not os.path.exists(log_file))
 
     # Bulletin data download section
     bulletin = BULLETIN()
@@ -409,6 +413,7 @@ if __name__ == '__main__':
                 uncompressed = ionosphere.uncompress(ionosphere_data_file)
                 renamed = ionosphere.rename_file(uncompressed, type='ionex')
                 ionosphere.get_metadata_info(renamed, type='ionex')
+
                 ionosphere.compress_new_data(renamed, type='ionex')
                 print(ionosphere_data_file, "...Done")
             else:

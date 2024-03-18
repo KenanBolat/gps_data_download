@@ -43,3 +43,7 @@ Change the config file to your needs.
 > ### Options: to download the bulletin a and download the data belonging two days before
 
 ``` python main.py -d 2 -abcDIR```
+> ### Options: to download ranged data from 2 to 10 days before range must be separated by a colon
+
+``` python main.py -d 2:10``` 
+
