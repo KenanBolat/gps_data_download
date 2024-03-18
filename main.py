@@ -18,7 +18,7 @@ load_dotenv()
 EARTH_DATA_USERNAME = os.getenv('EARTH_DATA_USERNAME')
 EARTH_DATA_PASSWORD = os.getenv('EARTH_DATA_PASSWORD')
 FILE_AGE = 4
-IONOSPHERE_RETRO_DATA = 6
+IONOSPHERE_RETRO_DATA = 10
 
 
 class GpsTime(object):
@@ -124,19 +124,39 @@ class CDDIS(object):
 
                 print(e)
 
-    def get_metadata_info(self, filename):
+    def get_metadata_info(self, filename, type='igu'):
+        if type == 'igu':
 
-        with open(filename, 'r') as f:
-            data = [row[0] for row in csv.reader(f)]
-            dates = [datetime.datetime.strptime(row[3:-12], '%Y %m %d %H %M') for row in data if re.search(r'^\*', row)]
-            name_string = [re.search(self.name_match_string, row).group() for row in data if
-                           re.search(self.name_match_string, row)]
-            df = pd.DataFrame(dates, columns=['Date'])
-            self.meta_data = {"file_name": filename,
-                              "name_string": name_string[0],
-                              "date_start": df.Date.min(),
-                              "date_end": df.Date.max(),
-                              }
+            with open(filename, 'r') as f:
+                data = [row[0] for row in csv.reader(f)]
+                dates = [datetime.datetime.strptime(row[3:-12], '%Y %m %d %H %M') for row in data if
+                         re.search(r'^\*', row)]
+                name_string = [re.search(self.name_match_string, row).group() for row in data if
+                               re.search(self.name_match_string, row)]
+                df = pd.DataFrame(dates, columns=['Date'])
+                self.meta_data = {"file_name": filename,
+                                  "name_string": name_string[0],
+                                  "date_start": df.Date.min(),
+                                  "date_end": df.Date.max(),
+                                  }
+        elif type == 'ionex':
+            with open(filename, 'r') as f:
+                data = [row[0] for row in csv.reader(f)]
+
+                epoch_of_first_map = data[12].split()
+                epoch_of_last_map = data[13].split()
+
+                self.meta_data = {"file_name": filename,
+                                  "name_string": data[0].split()[1],
+
+                                  "date_start": datetime.datetime(int(epoch_of_first_map[0]),
+                                                                  int(epoch_of_first_map[1]),
+                                                                  int(epoch_of_first_map[2])),
+
+                                  "date_end": datetime.datetime(int(epoch_of_last_map[0]),
+                                                                int(epoch_of_last_map[1]),
+                                                                int(epoch_of_last_map[2])),
+                                  }
 
     def rename_file(self, filename, type='igu'):
         if type == 'igu':
@@ -148,10 +168,19 @@ class CDDIS(object):
         return new_name
 
     def compress_new_data(self, filename, type='igu'):
+        date_string = self.meta_data['date_start'].strftime("%Y%m%d")
+
+        if not os.path.exists(f'./{self.igu_folder}/{date_string}'):
+            os.mkdir(f'./{self.igu_folder}/{date_string}')
+
+        if not os.path.exists(f'./{self.ionex_folder}/{date_string}'):
+            os.mkdir(f'./{self.ionex_folder}/{date_string}')
+
         if type == 'igu':
-            fname = os.path.join(self.igu_folder, filename + ".Z")
+            fname = os.path.join(f'./{self.igu_folder}/{date_string}', filename + ".Z")
+
         elif type == 'ionex':
-            fname = os.path.join(self.ionex_folder, filename + ".Z")
+            fname = os.path.join(f'./{self.ionex_folder}/{date_string}', filename + ".Z")
 
         with open(filename, 'rb') as infile, \
                 gzip.open(fname, "wb") as gzip_file:
@@ -379,6 +408,7 @@ if __name__ == '__main__':
             if ionosphere.get_file(ionosphere_data_url, ionosphere_data_file):
                 uncompressed = ionosphere.uncompress(ionosphere_data_file)
                 renamed = ionosphere.rename_file(uncompressed, type='ionex')
+                ionosphere.get_metadata_info(renamed, type='ionex')
                 ionosphere.compress_new_data(renamed, type='ionex')
                 print(ionosphere_data_file, "...Done")
             else:
