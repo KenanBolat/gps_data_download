@@ -271,11 +271,11 @@ class SolarData():
         files = self.ftp.nlst()
         for day in self.dates:
             day_to_download = day.strftime('%m%d')
-            print(day_to_download)
             new_name = day.strftime('%Y%m%d')
-            print(new_name)
+            print(f"{new_name} is being searched")
             for file in files:
                 if file.endswith(f'{day_to_download}RSGA.txt'):
+                    print(f"{file} :: Available")
                     local_file_path = os.path.join(self.folders["rsga"], f'{new_name}_RSGA.txt')
                     with open(local_file_path, 'wb') as local_file:
                         self.ftp.retrbinary('RETR ' + file, local_file.write)

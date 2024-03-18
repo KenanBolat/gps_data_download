@@ -12,3 +12,10 @@
 *.csv
 *.log
 tmp_files/
+RSGA/
+bulletin_a/
+bulletin_b/
+bulletin_c/
+bulletin_d/
+igu_files/
+ionex_files/
