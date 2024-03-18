@@ -332,7 +332,7 @@ if __name__ == '__main__':
         if ':' in str(args.d):
             start, end = map(int, args.d.split(':'))
         else:  # if only one value is given
-            start, end = args.d, args.d  # end is not included
+            start, end = int(args.d), int(args.d)  # end is not included
 
     for day_to_look in range(start, end + 1):
         igs_data = CDDIS(day_to_look)
