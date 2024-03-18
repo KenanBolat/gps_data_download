@@ -42,4 +42,4 @@ Change the config file to your needs.
 
 > ### Options: to download the bulletin a and download the data belonging two days before
 
-``` python main.py -a -d 2```
+``` python main.py -d 2 -abcDIR```
