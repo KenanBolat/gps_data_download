@@ -11,11 +11,14 @@ import pandas as pd
 from datetime import date
 import argparse
 from lxml import html
+import ftplib
 
 load_dotenv()
 
 EARTH_DATA_USERNAME = os.getenv('EARTH_DATA_USERNAME')
 EARTH_DATA_PASSWORD = os.getenv('EARTH_DATA_PASSWORD')
+FILE_AGE = 4
+IONOSPHERE_RETRO_DATA = 6
 
 
 class GpsTime(object):
@@ -75,7 +78,8 @@ class CDDIS(object):
         self.folders = [self.igu_folder,
                         self.log_folder,
                         self.temp,
-                        self.ionex_folder]
+                        self.ionex_folder,
+                        ]
 
     def check_connection(self):
         url = self.site[0]
@@ -105,7 +109,7 @@ class CDDIS(object):
                 return False
 
     @staticmethod
-    def empty_folder(folder, age=0):
+    def empty_folder(folder, age=FILE_AGE):
 
         threshold = datetime.datetime.now() - datetime.timedelta(days=age)
         for file in os.listdir(folder):
@@ -171,6 +175,12 @@ class BULLETIN(object):
         self.bulletin_b_folder = 'bulletin_b/'
         self.bulletin_c_folder = 'bulletin_c/'
         self.bulletin_d_folder = 'bulletin_d/'
+        self.bulletins = {
+            'bulletin_a': 'a',
+            'bulletin_b': 'b',
+            'bulletin_c': 'c',
+            'bulletin_D': 'D',
+        }
         self.folders = {"a": self.bulletin_a_folder,
                         "b": self.bulletin_b_folder,
                         "c": self.bulletin_c_folder,
@@ -224,17 +234,69 @@ class BULLETIN(object):
         return data
 
 
+class SolarData():
+    def __init__(self):
+        self.ftp_adress = "ftp.swpc.noaa.gov"
+        self.RSGA_location = "/pub/forecasts/RSGA"
+        self.folders = {"rsga": "RSGA"}
+        self.days_range = 4
+        self.dates = None
+        self.ftp = None
+        self.ftp_user = "anonymous"
+        self.ftp_password = "anonymous"
+
+    def check_folders(self):
+        for folder in self.folders.values():
+            if not os.path.exists(f'./{folder}'):
+                os.mkdir(f'./{folder}')
+
+    def calculate_dates(self):
+        dates = []
+        for days in range(self.days_range):
+            dates.append(datetime.datetime.now() - datetime.timedelta(days=days))
+        self.dates = dates
+
+    def get_data(self):
+
+        self.calculate_dates()
+        self.check_folders()
+
+        self.ftp = ftplib.FTP(self.ftp_adress)
+        self.ftp.login(self.ftp_user, self.ftp_password)
+
+        # Change to the desired directory
+        self.ftp.cwd(self.RSGA_location)
+
+        # List all files in the directory
+        files = self.ftp.nlst()
+        for day in self.dates:
+            day_to_download = day.strftime('%m%d')
+            print(day_to_download)
+            new_name = day.strftime('%Y%m%d')
+            print(new_name)
+            for file in files:
+                if file.endswith(f'{day_to_download}RSGA.txt'):
+                    local_file_path = os.path.join(self.folders["rsga"], f'{new_name}_RSGA.txt')
+                    with open(local_file_path, 'wb') as local_file:
+                        self.ftp.retrbinary('RETR ' + file, local_file.write)
+
+
 if __name__ == '__main__':
     # day 1 yesterday
     # 2 days before
     # 3 days before
     parser = argparse.ArgumentParser()
     parser.add_argument('-d', type=int, required=False)
+
     parser.add_argument('-a', '--bulletin-a', action="store_true", required=False)
     parser.add_argument('-b', '--bulletin-b', action="store_true", required=False)
     parser.add_argument('-c', '--bulletin-c', action="store_true", required=False)
     parser.add_argument('-D', '--bulletin-D', action="store_true", required=False)
+    parser.add_argument('-R', '--solar-data', action="store_true", required=False)
+    parser.add_argument('-I', '--ionex-data', action="store_true", required=False)
+
     args = parser.parse_args()
+
     if args.d is None:
         day_to_look = 1
     else:
@@ -246,9 +308,9 @@ if __name__ == '__main__':
 
     igs_data.check_folders()
 
-    igs_data.empty_folder(igs_data.temp)
-    igs_data.empty_folder(igs_data.igu_folder, age=7)
-    igs_data.empty_folder(igs_data.ionex_folder, age=7)
+    igs_data.empty_folder(igs_data.temp, age=0)
+    igs_data.empty_folder(igs_data.igu_folder)
+    igs_data.empty_folder(igs_data.ionex_folder)
 
     res = pd.DataFrame(columns=['file_name',
                                 'name_string',
@@ -260,18 +322,6 @@ if __name__ == '__main__':
                                 'downloaded_at'])
 
     print(igs_data.data)
-
-    ionex_data_url = ionex_data_url = f"{igs_data.site[0]}/ionex/{igs_data.gps_info.year}/{igs_data.gps_info.total_days}"
-    ionex_data_file = f"IGS0OPSRAP_{igs_data.gps_info.year}{igs_data.gps_info.total_days}0000_01D_02H_GIM.INX.gz"
-
-    if igs_data.get_file(ionex_data_url, ionex_data_file):
-        uncompressed = igs_data.uncompress(ionex_data_file)
-        renamed = igs_data.rename_file(uncompressed, type='ionex')
-        igs_data.compress_new_data(renamed, type='ionex')
-
-        print(ionex_data_file, "...Done")
-    else:
-        print(ionex_data_file, "...Not Available")
 
     for file_ in igs_data.gps_info.date_string_array:
         url = f'{igs_data.site[0]}/{igs_data.gps_info.no_weeks}'
@@ -299,12 +349,38 @@ if __name__ == '__main__':
             print(file_[0], "...Not Available")
     log_file = os.path.join(igs_data.log_folder, 'log_' + datetime.datetime.today().strftime("%Y%m%d") + '.log')
     res.to_csv(log_file, mode='a', header=not os.path.exists(log_file))
-    bul = BULLETIN()
-    if args.bulletin_a:
-        bul.get_data('a')
-    if args.bulletin_b:
-        bul.get_data('b')
-    if args.bulletin_c:
-        bul.get_data('c')
-    if args.bulletin_D:
-        bul.get_data('D')
+
+    # Bulletin data download section
+    bulletin = BULLETIN()
+
+    for bulletin_arg, bulletin_value in bulletin.bulletins.items():
+        if getattr(args, bulletin_arg):
+            print(f'Getting the bulletin : {bulletin_value}   data')
+            bulletin.get_data(bulletin_value)
+
+    # Solar Data download section
+    if args.solar_data:
+        print("Solar data is being requested")
+        solar = SolarData()
+        solar.get_data()
+
+    # Ionosphere  Data download section
+    if args.ionex_data:
+
+        for day_ in range(IONOSPHERE_RETRO_DATA):
+
+            ionosphere = CDDIS(day_)
+            ionosphere.check_folders()
+            print(ionosphere.data)
+
+            ionosphere_data_url = f"{ionosphere.site[0]}/ionex/{ionosphere.gps_info.year}/{ionosphere.gps_info.total_days}"
+            ionosphere_data_file = f"IGS0OPSRAP_{ionosphere.gps_info.year}{ionosphere.gps_info.total_days}0000_01D_02H_GIM.INX.gz"
+
+            if ionosphere.get_file(ionosphere_data_url, ionosphere_data_file):
+                uncompressed = ionosphere.uncompress(ionosphere_data_file)
+                renamed = ionosphere.rename_file(uncompressed, type='ionex')
+                ionosphere.compress_new_data(renamed, type='ionex')
+                print(ionosphere_data_file, "...Done")
+            else:
+                print(ionosphere_data_file, "...Not Available")
+            del ionosphere
