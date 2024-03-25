@@ -28,7 +28,7 @@ Change the config file to your needs.
 <hr>
 </details>
 
-> ### Default:The script will search one day before 
+> ### Default:The script will search one day before for the IGU data 
 
 ``` python main.py``` 
 
@@ -40,10 +40,11 @@ Change the config file to your needs.
 
 ``` python main.py -a ```
 
-> ### Options: to download the bulletin a and download the data belonging two days before
+> ### Options: to download the bulletin ```a```, ```b```, ```c```, ```d``` and download the igu data belonging two days before
 
 ``` python main.py -d 2 -abcDIR```
 > ### Options: to download ranged data from 2 to 10 days before range must be separated by a colon
 
 ``` python main.py -d 2:10``` 
 
+> Note: The script will download the data in the designated folder with the date as the folder name (_i.e.,_ YYYMMDD).
