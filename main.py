@@ -87,7 +87,7 @@ class CDDIS(object):
             session.auth = (self.user_name, self.password)
             r1 = session.request('get', url)
             r = session.get(r1.url, auth=(self.user_name, self.password))
-            assert r.ok, f"No connection has been established!!! Check remote site address!!!, {r.reason}"
+            assert r.ok, f"No connection has been established with code: {r.status_code} : {r.reason} !!"
             return True
 
     def check_folders(self):
