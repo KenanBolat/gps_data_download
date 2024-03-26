@@ -15,10 +15,18 @@ import ftplib
 
 load_dotenv()
 
+# Get Credentials from .env file
 EARTH_DATA_USERNAME = os.getenv('EARTH_DATA_USERNAME')
 EARTH_DATA_PASSWORD = os.getenv('EARTH_DATA_PASSWORD')
+
+# Constants
 FILE_AGE = 4
 IONOSPHERE_RETRO_DATA = 5
+
+# ANSI Colors
+PROCESSING = '\033[93m⌛\033[0m'
+RED_CROSS = '\033[91m✗\033[0m'
+GREEN_TICK = '\033[92m✓\033[0m'
 
 
 class GpsTime(object):
@@ -300,13 +308,19 @@ class SolarData():
         for day in self.dates:
             day_to_download = day.strftime('%m%d')
             new_name = day.strftime('%Y%m%d')
-            print(f"{new_name} is being searched")
+            print(f"{new_name} : {PROCESSING}",  end='', flush=True)
+            flag = False
             for file in files:
                 if file.endswith(f'{day_to_download}RSGA.txt'):
-                    print(f"{file} :: Available")
+                    flag = True
+                    print('\r' + f"{new_name} : {GREEN_TICK}")
                     local_file_path = os.path.join(self.folders["rsga"], f'{new_name}_RSGA.txt')
                     with open(local_file_path, 'wb') as local_file:
                         self.ftp.retrbinary('RETR ' + file, local_file.write)
+                    break
+            if not flag:
+                print(print('\r' + f"{new_name} : {RED_CROSS}"))
+
 
 
 if __name__ == '__main__':
@@ -360,7 +374,7 @@ if __name__ == '__main__':
             url = f'{igs_data.site[0]}/{igs_data.gps_info.no_weeks}'
 
             if igs_data.get_file(url, file_[0]):
-                print(file_[0], "...Done")
+                print(f'{file_[0]} : {GREEN_TICK}')
                 uncompressed_file = igs_data.uncompress(file_[0])
                 igs_data.get_metadata_info(uncompressed_file)
                 # res
@@ -379,7 +393,7 @@ if __name__ == '__main__':
                 else:
                     print('Date is not relevant !! check dates !! ')
             else:
-                print(file_[0], "...Not Available")
+                print(f'{file_[0]}:{RED_CROSS}')
         log_file = os.path.join(igs_data.log_folder, 'log_' + datetime.datetime.today().strftime("%Y%m%d") + '.log')
         res.to_csv(log_file, mode='a', header=not os.path.exists(log_file))
 
@@ -415,7 +429,7 @@ if __name__ == '__main__':
                 ionosphere.get_metadata_info(renamed, type='ionex')
 
                 ionosphere.compress_new_data(renamed, type='ionex')
-                print(ionosphere_data_file, "...Done")
+                print(f'{ionosphere_data_file}: {GREEN_TICK}')
             else:
-                print(ionosphere_data_file, "...Not Available")
+                print(f'{ionosphere_data_file}: {RED_CROSS}')
             del ionosphere
