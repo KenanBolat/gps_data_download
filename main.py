@@ -270,9 +270,9 @@ class BULLETIN(object):
         return data
 
 
-class SolarData():
+class SolarData:
     def __init__(self):
-        self.ftp_adress = "ftp.swpc.noaa.gov"
+        self.ftp_address = "ftp.swpc.noaa.gov"
         self.RSGA_location = "/pub/forecasts/RSGA"
         self.folders = {"rsga": "RSGA"}
         self.days_range = 4
@@ -297,7 +297,7 @@ class SolarData():
         self.calculate_dates()
         self.check_folders()
 
-        self.ftp = ftplib.FTP(self.ftp_adress)
+        self.ftp = ftplib.FTP(self.ftp_address)
         self.ftp.login(self.ftp_user, self.ftp_password)
 
         # Change to the desired directory
@@ -308,7 +308,7 @@ class SolarData():
         for day in self.dates:
             day_to_download = day.strftime('%m%d')
             new_name = day.strftime('%Y%m%d')
-            print(f"{new_name} : {PROCESSING}",  end='', flush=True)
+            print(f"{new_name} : {PROCESSING}", end='', flush=True)
             flag = False
             for file in files:
                 if file.endswith(f'{day_to_download}RSGA.txt'):
@@ -319,8 +319,7 @@ class SolarData():
                         self.ftp.retrbinary('RETR ' + file, local_file.write)
                     break
             if not flag:
-                print(print('\r' + f"{new_name} : {RED_CROSS}"))
-
+                print('\r' + f"{new_name} : {RED_CROSS}")
 
 
 if __name__ == '__main__':
