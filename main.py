@@ -90,10 +90,10 @@ class CDDIS(object):
                         ]
 
     def check_connection(self):
-        url = self.site[0]
+        link = self.site[0]
         with requests.Session() as session:
             session.auth = (self.user_name, self.password)
-            r1 = session.request('get', url)
+            r1 = session.request('get', link)
             r = session.get(r1.url, auth=(self.user_name, self.password))
             assert r.ok, f"No connection has been established with code: {r.status_code} : {r.reason} !!"
             return True
@@ -103,11 +103,11 @@ class CDDIS(object):
             if not os.path.exists(f'./{folder}'):
                 os.mkdir(f'./{folder}')
 
-    def get_file(self, url, filename):
-        file_ = f'{url}/{filename}'
+    def get_file(self, link, filename):
+        file_inner = f'{link}/{filename}'
         with requests.Session() as session:
             session.auth = (self.user_name, self.password)
-            r1 = session.request('get', file_)
+            r1 = session.request('get', file_inner)
             r = session.get(r1.url, auth=(self.user_name, self.password))
             if r.ok:
                 with open(filename, 'wb') as file:
@@ -132,8 +132,8 @@ class CDDIS(object):
 
                 print(e)
 
-    def get_metadata_info(self, filename, type='igu'):
-        if type == 'igu':
+    def get_metadata_info(self, filename, data_type='igu'):
+        if data_type == 'igu':
 
             with open(filename, 'r') as f:
                 data = [row[0] for row in csv.reader(f)]
@@ -147,7 +147,7 @@ class CDDIS(object):
                                   "date_start": df.Date.min(),
                                   "date_end": df.Date.max(),
                                   }
-        elif type == 'ionex':
+        elif data_type == 'ionex':
             with open(filename, 'r') as f:
                 data = [row[0] for row in csv.reader(f)]
 
@@ -166,42 +166,44 @@ class CDDIS(object):
                                                                 int(epoch_of_last_map[2])),
                                   }
 
-    def rename_file(self, filename, type='igu'):
-        if type == 'igu':
+    def rename_file(self, filename, data_type='igu'):
+        new_name = None
+        if data_type == 'igu':
             new_name = f"igu{self.meta_data['name_string']}.sp3"
-        elif type == 'ionex':
+        elif data_type == 'ionex':
             new_name = f"igrg{self.gps_info.total_days}0.{str(self.gps_info.year)[2:]}i"
         os.rename(filename, new_name)
         # shutil.move(filename, self.temp)
         return new_name
 
-    def compress_new_data(self, filename, type='igu'):
+    def compress_new_data(self, filename, data_type='igu'):
+        filename_updated = None
         date_string = self.meta_data['date_start'].strftime("%Y%m%d")
 
-        if type == 'igu':
+        if data_type == 'igu':
             if not os.path.exists(f'./{self.igu_folder}/{date_string}'):
                 os.mkdir(f'./{self.igu_folder}/{date_string}')
 
-            fname = os.path.join(f'./{self.igu_folder}/{date_string}', filename + ".Z")
+            filename_updated = os.path.join(f'./{self.igu_folder}/{date_string}', filename + ".Z")
 
-        elif type == 'ionex':
+        elif data_type == 'ionex':
             if not os.path.exists(f'./{self.ionex_folder}/{date_string}'):
                 os.mkdir(f'./{self.ionex_folder}/{date_string}')
-            fname = os.path.join(f'./{self.ionex_folder}/{date_string}', filename + ".Z")
+            filename_updated = os.path.join(f'./{self.ionex_folder}/{date_string}', filename + ".Z")
 
         with open(filename, 'rb') as infile, \
-                gzip.open(fname, "wb") as gzip_file:
+                gzip.open(filename_updated, "wb") as gzip_file:
             gzip_file.writelines(infile)
 
         shutil.move(os.path.join('./', filename), os.path.join(self.temp, filename))
 
     def uncompress(self, filename):
-        uncompressed = filename.split('.gz')[0].lower()
+        uncompressed_data = filename.split('.gz')[0].lower()
         with gzip.open(filename, 'rb') as f_in:
-            with open(uncompressed, 'wb') as f_out:
+            with open(uncompressed_data, 'wb') as f_out:
                 shutil.copyfileobj(f_in, f_out)
         shutil.move(os.path.join('./', filename), os.path.join(self.temp, filename))
-        return uncompressed
+        return uncompressed_data
 
 
 class BULLETIN(object):
@@ -237,8 +239,8 @@ class BULLETIN(object):
                 os.mkdir(f'./{folder}')
 
     @staticmethod
-    def get_response(url):
-        response = requests.get(url)
+    def get_response(link):
+        response = requests.get(link)
         tree = html.fromstring(response.content)
         return tree
 
@@ -392,7 +394,7 @@ if __name__ == '__main__':
                 else:
                     print('Date is not relevant !! check dates !! ')
             else:
-                print(f'{file_[0]}:{RED_CROSS}')
+                print(f'{file_[0]}: {RED_CROSS}')
         log_file = os.path.join(igs_data.log_folder, 'log_' + datetime.datetime.today().strftime("%Y%m%d") + '.log')
         res.to_csv(log_file, mode='a', header=not os.path.exists(log_file))
 
@@ -419,15 +421,18 @@ if __name__ == '__main__':
             ionosphere.check_folders()
             print(ionosphere.data)
 
-            ionosphere_data_url = f"{ionosphere.site[0]}/ionex/{ionosphere.gps_info.year}/{ionosphere.gps_info.total_days}"
-            ionosphere_data_file = f"IGS0OPSRAP_{ionosphere.gps_info.year}{ionosphere.gps_info.total_days}0000_01D_02H_GIM.INX.gz"
+            ionosphere_data_url = (f"{ionosphere.site[0]}/ionex/{ionosphere.gps_info.year}/"
+                                   f"{ionosphere.gps_info.total_days}")
+
+            ionosphere_data_file = (f"IGS0OPSRAP_{ionosphere.gps_info.year}"
+                                    f"{ionosphere.gps_info.total_days}0000_01D_02H_GIM.INX.gz")
 
             if ionosphere.get_file(ionosphere_data_url, ionosphere_data_file):
                 uncompressed = ionosphere.uncompress(ionosphere_data_file)
-                renamed = ionosphere.rename_file(uncompressed, type='ionex')
-                ionosphere.get_metadata_info(renamed, type='ionex')
+                renamed = ionosphere.rename_file(uncompressed, data_type='ionex')
+                ionosphere.get_metadata_info(renamed, data_type='ionex')
 
-                ionosphere.compress_new_data(renamed, type='ionex')
+                ionosphere.compress_new_data(renamed, data_type='ionex')
                 print(f'{ionosphere_data_file}: {GREEN_TICK}')
             else:
                 print(f'{ionosphere_data_file}: {RED_CROSS}')
