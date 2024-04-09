@@ -253,7 +253,7 @@ class BULLETIN(object):
         tree = self.get_response(self.eop_link[bulletin_code])
         element_date = self.get_match(tree, tag=self.xpath_tags['eop_date'])
         element_link = self.get_match(tree, tag=self.xpath_tags['eop_link'])
-        print('date::', element_date[0].text, "::link::", element_link[0])
+        print(f'date: {element_date[0].text}::link:{element_link[0]}')
         data = [element_date, element_link[0]]
         assert None not in data, "Does not match any result in a row"
         response = requests.get(element_link[0])
@@ -268,7 +268,7 @@ class BULLETIN(object):
                 f.write(xml_content)
 
         else:
-            print("Failed to download XML file")
+            print(f'Failed to download XML file')
         return data
 
 
@@ -310,7 +310,7 @@ class SolarData:
         for day in self.dates:
             day_to_download = day.strftime('%m%d')
             new_name = day.strftime('%Y%m%d')
-            print(f"{new_name} : {PROCESSING}", end='', flush=True)
+            print(f'{new_name} : {PROCESSING}', end='', flush=True)
             flag = False
             for file in files:
                 if file.endswith(f'{day_to_download}RSGA.txt'):
@@ -408,7 +408,7 @@ if __name__ == '__main__':
 
     # Solar Data download section
     if args.solar_data:
-        print("Solar data is being requested")
+        print('Solar data is being requested')
         solar = SolarData()
         solar.get_data()
 
@@ -421,11 +421,11 @@ if __name__ == '__main__':
             ionosphere.check_folders()
             print(ionosphere.data)
 
-            ionosphere_data_url = (f"{ionosphere.site[0]}/ionex/{ionosphere.gps_info.year}/"
-                                   f"{ionosphere.gps_info.total_days}")
+            ionosphere_data_url = (f'{ionosphere.site[0]}/ionex/{ionosphere.gps_info.year}/'
+                                   f'{ionosphere.gps_info.total_days}')
 
-            ionosphere_data_file = (f"IGS0OPSRAP_{ionosphere.gps_info.year}"
-                                    f"{ionosphere.gps_info.total_days}0000_01D_02H_GIM.INX.gz")
+            ionosphere_data_file = (f'IGS0OPSRAP_{ionosphere.gps_info.year}'
+                                    f'{ionosphere.gps_info.total_days}0000_01D_02H_GIM.INX.gz')
 
             if ionosphere.get_file(ionosphere_data_url, ionosphere_data_file):
                 uncompressed = ionosphere.uncompress(ionosphere_data_file)
