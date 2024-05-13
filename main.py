@@ -23,6 +23,7 @@ EARTH_DATA_PASSWORD = os.getenv('EARTH_DATA_PASSWORD')
 FILE_AGE = 4
 IONOSPHERE_RETRO_DATA = 5
 
+
 # ANSI Colors
 PROCESSING = '\033[93m⌛\033[0m'
 RED_CROSS = '\033[91m✗\033[0m'
@@ -45,6 +46,7 @@ class GpsTime(object):
                           '1200',
                           '1800']
         self.date_string_array = []
+        self.verbose = False
 
     def form_info(self):
         self.timedelta_buffer = (datetime.datetime.today() -
@@ -253,7 +255,8 @@ class BULLETIN(object):
         tree = self.get_response(self.eop_link[bulletin_code])
         element_date = self.get_match(tree, tag=self.xpath_tags['eop_date'])
         element_link = self.get_match(tree, tag=self.xpath_tags['eop_link'])
-        print(f'date: {element_date[0].text}::link:{element_link[0]}')
+        if args.verbose:
+            print(f'date: {element_date[0].text}::link:{element_link[0]}')
         data = [element_date, element_link[0]]
         assert None not in data, "Does not match any result in a row"
         response = requests.get(element_link[0])
@@ -310,7 +313,8 @@ class SolarData:
         for day in self.dates:
             day_to_download = day.strftime('%m%d')
             new_name = day.strftime('%Y%m%d')
-            print(f'{new_name} : {PROCESSING}', end='', flush=True)
+            if args.verbose:
+                print(f'{new_name} : {PROCESSING}', end='', flush=True)
             flag = False
             for file in files:
                 if file.endswith(f'{day_to_download}RSGA.txt'):
@@ -337,6 +341,7 @@ if __name__ == '__main__':
     parser.add_argument('-D', '--bulletin-D', action="store_true", required=False)
     parser.add_argument('-R', '--solar-data', action="store_true", required=False)
     parser.add_argument('-I', '--ionex-data', action="store_true", required=False)
+    parser.add_argument('-V', '--verbose', action="store_true", required=False)
 
     args = parser.parse_args()
 
@@ -348,7 +353,7 @@ if __name__ == '__main__':
             start, end = map(int, args.d.split(':'))
         else:  # if only one value is given
             start, end = int(args.d), int(args.d)  # end is not included
-
+    print(f"Downloading the IGS data")
     for day_to_look in range(start, end + 1):
         igs_data = CDDIS(day_to_look)
 
@@ -368,8 +373,8 @@ if __name__ == '__main__':
                                     'date_to_download',
                                     'day_of_year',
                                     'downloaded_at'])
-
-        print(igs_data.data)
+        if args.verbose:
+            print(igs_data.data)
 
         for file_ in igs_data.gps_info.date_string_array:
             url = f'{igs_data.site[0]}/{igs_data.gps_info.no_weeks}'
@@ -379,7 +384,8 @@ if __name__ == '__main__':
                 uncompressed_file = igs_data.uncompress(file_[0])
                 igs_data.get_metadata_info(uncompressed_file)
                 # res
-                print(igs_data.meta_data)
+                if args.verbose:
+                    print(igs_data.meta_data)
                 if igs_data.meta_data['date_start'].date() <= \
                         igs_data.gps_info.timedelta_buffer.date() <= \
                         igs_data.meta_data['date_end'].date():
@@ -397,29 +403,38 @@ if __name__ == '__main__':
                 print(f'{file_[0]}: {RED_CROSS}')
         log_file = os.path.join(igs_data.log_folder, 'log_' + datetime.datetime.today().strftime("%Y%m%d") + '.log')
         res.to_csv(log_file, mode='a', header=not os.path.exists(log_file))
-
+    print('=' * 60)
     # Bulletin data download section
     bulletin = BULLETIN()
+    bulletin_print_flag = False
 
     for bulletin_arg, bulletin_value in bulletin.bulletins.items():
         if getattr(args, bulletin_arg):
+            if not bulletin_print_flag:
+                print('Bulletin data is being requested')
+                bulletin_print_flag = True
             print(f'Getting the bulletin : {bulletin_value}   data')
             bulletin.get_data(bulletin_value)
+    if bulletin_print_flag:
+        print('=' * 60)
 
     # Solar Data download section
     if args.solar_data:
         print('Solar data is being requested')
         solar = SolarData()
         solar.get_data()
+        print('=' * 60)
 
     # Ionosphere  Data download section
     if args.ionex_data:
 
+        print("Downloading Ionosphere Data:")
         for day_ in range(IONOSPHERE_RETRO_DATA):
 
             ionosphere = CDDIS(day_)
             ionosphere.check_folders()
-            print(ionosphere.data)
+            if args.verbose:
+                print(ionosphere.data)
 
             ionosphere_data_url = (f'{ionosphere.site[0]}/ionex/{ionosphere.gps_info.year}/'
                                    f'{ionosphere.gps_info.total_days}')
@@ -437,3 +452,4 @@ if __name__ == '__main__':
             else:
                 print(f'{ionosphere_data_file}: {RED_CROSS}')
             del ionosphere
+        print('=' * 60)

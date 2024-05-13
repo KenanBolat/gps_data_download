@@ -45,6 +45,6 @@ Change the config file to your needs.
 ``` python main.py -d 2 -abcDIR```
 > ### Options: to download ranged data from 2 to 10 days before range must be separated by a colon
 
-``` python main.py -d 2:10``` 
+``` python main.py -d 0:10``` 
 
 > Note: The script will download the data in the designated folder with the date as the folder name (_i.e.,_ YYYMMDD).
